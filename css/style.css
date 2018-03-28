@@ -1,0 +1,180 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+}
+body {
+	font-family: arial;
+	color: #fff;
+	font-size: 13px;
+	line-height: 1.5em;
+	background: url(../images/bg.png);
+}
+.clearfix {
+	clear: both;
+}
+.player_container {
+	width: 60%;
+	overflow: auto;
+	background: #333;
+	margin: 60px auto;
+	border-radius: 10px;
+	border: #666 solid 2px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+#audio_image {
+	float: left;
+	height: 200px;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 15px;
+}
+.info {
+	text-align: center;
+}
+.info .artist {
+	font-weight: bold;
+}
+.cover {
+	z-index: 1;
+	width: 100%;
+}
+input#volume {
+	width: 35%;
+	height: 1px;
+	margin: 12px auto;
+	background: #ccc;
+	-webkit-appearance: none !important;
+}
+input#volume::-webkit-slider-thumb {
+	width: 12px;
+	height: 12px;
+	-webkit-appearance: none !important;
+	background: url(../images/knob.png) no-repeat;
+}
+.buttons button {
+	background: inherit;
+}
+.buttons span {
+	font-size: 30px;
+}
+#playlist {
+	padding: 10px;
+	list-style-type: none;
+}
+#playlist li {
+	margin: 5px;
+	cursor: pointer;
+}
+.tracker {
+	width: 100%;
+	position: relative;
+}
+#playlist li.active {
+	padding: 3px;
+	background: #666;
+	font-weight: bold;
+}
+.progress_bar {
+	height: 10px;
+	background: url(../images/progress_bg.png) no-repeat;
+}
+.progress {
+	height: 10px;
+	display: inline-block;
+	background: url(../images/progress.png) no-repeat;
+}
+#duration {
+	float: right;
+	background: #000;
+	padding: 4px 8px;
+	border-radius: 5px;
+}
+.navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+}
+footer {
+	background-color: #f2f2f2;
+	padding: 25px;
+}
+.playlist p {
+}
+.playlist {
+	border-radius: 50%;
+}
+h2 span {
+	top: -11px;
+	left: 130px;
+	width: 20px;
+	height: 125px;
+	position: absolute;
+	font: 26px Monaco, MonoSpace;
+	transform-origin: bottom center;
+}
+.char1 {transform: rotate(6deg); }
+.char2 {transform: rotate(12deg); }
+.char3 {
+	transform: rotate(18deg);
+}
+.char4 {
+	transform: rotate(24deg);
+}
+.char5 {
+	transform: rotate(30deg);
+}
+.char6 {
+	transform: rotate(36deg);
+}
+.char7 {
+	transform: rotate(42deg);
+}
+.char8 {
+	transform: rotate(48deg);
+}
+.char9 {
+	transform: rotate(54deg);
+}
+.char10 {
+	transform: rotate(60deg);
+}
+.playlist img {
+	width: 80%;
+}
+.playlist_content {
+	width: 80%;
+	height: 176px;
+	position: relative;
+	background: url("../images/circle2.png");
+}
+.playlist_content div {
+	padding: 15px 0 0;
+}
+.click_play {
+	position: relative;
+	top: 53px;
+	right: 21px;
+}
+.glyphicon-play {
+	font-size: 40px;
+}
+.glyphicon-pause {
+	font-size: 40px;
+}
+h2 span {
+	z-index: 2;
+}
+.fix {
+	position: fixed;
+}
+.navbar {
+	width: 100%;
+}
+.col-centered {
+
+	float: none;
+	margin: 0 auto;
+
+}
