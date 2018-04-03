@@ -63,6 +63,9 @@ input#volume::-webkit-slider-thumb {
 #playlist {
 	padding: 10px;
 	list-style-type: none;
+	overflow: scroll;
+	overflow-x: hidden;
+	height: 104px;
 }
 #playlist li {
 	margin: 5px;
@@ -144,18 +147,30 @@ h2 span {
 	width: 80%;
 }
 .playlist_content {
-	width: 80%;
-	height: 176px;
+	height: 168px;
+	opacity: 0.7;
 	position: relative;
-	background: url("../images/circle2.png");
+	background: url(../images/broken.png) no-repeat;
+}
+.playlist_content:hover {
+	opacity: 1;
 }
 .playlist_content div {
 	padding: 15px 0 0;
 }
+.playlist_btns {
+	top: 16px;
+	left: 116px;
+	display: none;
+	position: absolute;
+}
+.playlist_content:hover .playlist_btns {
+	display: block;
+}
 .click_play {
-	position: relative;
-	top: 53px;
-	right: 21px;
+	top: 55px;
+	left: -7px;
+	position: absolute;
 }
 .glyphicon-play {
 	font-size: 40px;
@@ -165,6 +180,7 @@ h2 span {
 }
 h2 span {
 	z-index: 2;
+	color: white;
 }
 .fix {
 	position: fixed;
@@ -177,4 +193,21 @@ h2 span {
 	float: none;
 	margin: 0 auto;
 
+}
+.playlist_btns {
+
+}
+.main_playlists {
+	padding: 30px 0 0;
+}
+.modal {
+	color: black;
+	/*opacity: 0.2;*/
+	/*background-color: red;*/
+}
+.modal-content {
+	background: #c9e2b3;
+}
+.modal label {
+	display: block;
 }
