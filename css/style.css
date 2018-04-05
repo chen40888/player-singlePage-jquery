@@ -62,10 +62,10 @@ input#volume::-webkit-slider-thumb {
 }
 #playlist {
 	padding: 10px;
-	list-style-type: none;
+	height: 104px;
 	overflow: scroll;
 	overflow-x: hidden;
-	height: 104px;
+	list-style-type: none;
 }
 #playlist li {
 	margin: 5px;
@@ -100,8 +100,8 @@ input#volume::-webkit-slider-thumb {
 	border-radius: 0;
 }
 footer {
-	background-color: #f2f2f2;
 	padding: 25px;
+	background-color: #f2f2f2;
 }
 .playlist p {
 }
@@ -109,7 +109,7 @@ footer {
 	border-radius: 50%;
 }
 h2 span {
-	top: -11px;
+	top: 14px;
 	left: 130px;
 	width: 20px;
 	height: 125px;
@@ -179,7 +179,7 @@ h2 span {
 	font-size: 40px;
 }
 h2 span {
-	z-index: 2;
+	/*z-index: 2;*/
 	color: white;
 }
 .fix {
@@ -189,10 +189,8 @@ h2 span {
 	width: 100%;
 }
 .col-centered {
-
 	float: none;
 	margin: 0 auto;
-
 }
 .playlist_btns {
 
@@ -202,12 +200,35 @@ h2 span {
 }
 .modal {
 	color: black;
-	/*opacity: 0.2;*/
-	/*background-color: red;*/
 }
 .modal-content {
 	background: #c9e2b3;
 }
 .modal label {
 	display: block;
+}
+#songs_urls div {
+	margin: 5px 0 0;
+}
+.problem {
+	border: red;
+	background: red;
+}
+.pause_btn {
+	top: 55px;
+	left: -7px;
+	position: absolute;
+}
+.main_message {
+	top: 100%;
+	left: 50%;
+	z-index: 2;
+	right: 50%;
+	bottom: 50%;
+	width: 200px;
+	height: 200px;
+	display: none;
+	background: red;
+	position: absolute;
+	transform: translate(-50%, -50%);
 }

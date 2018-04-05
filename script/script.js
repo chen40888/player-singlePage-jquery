@@ -11,30 +11,20 @@
 			.on('click', '#stop', stop_music) //Stop Button
 			.on('click', '#playlist li', playlist_song)
 			.on('change', '#volume', change_vol)
-			.on('click', '#prev', prev_song)
-			.on('click', '#btn_step_1', next_step_to_save)
-			.on('click', '#prev_to_playlist_name', prev_to_change_playlist_name)
-			.on('blur','#search_music',search_this_song);
+			.on('click', '.click_play', play_music)
+			.on('click', '.pause_btn', pause_music)
+			.on('click', '#prev', prev_song);
 
 		var audio;
 
 		//Hide Pause Initially
 		$('#pause').hide();
+		$('.pause_btn').hide();
+		$('#main_player').hide();
 
 		//Initializer - Play First Song
-		initAudio($('#playlist').find('li:first-child'));
-
-		function next_step_to_save(e) {
-			e.preventDefault();
-			$('#setp_1').addClass('hide');
-			$('#step_2').removeClass('hide');
-		}
-
-		function prev_to_change_playlist_name(e) {
-			e.preventDefault();
-			$('#step_1').removeClass('hide');
-			$('#step_2').addClass('hide');
-		}
+		// מכניס את השיר הראשון שיש לו בליסט. אני לא צריך את זה ככה אני צריך שברגע שלוחצים play הוא מגיע לשם עם הרשימה
+		//initAudio($('#playlist').find('li:first-child'));
 
 		function initAudio(element){
 			var
@@ -62,17 +52,40 @@
 		}
 
 		function play_music() {
+			if(audio) pause_music();
+			show_pause_btn_after_click_on_play($(this));
+
+			$playlist_wraper = $(this).closest('.playlist');
+			$list_songs = $playlist_wraper.find('ul').html();
+			$('#playlist').html($list_songs);
+
+			initAudio($('#playlist').find('li:first-child'));
 			audio.play();
-			$('#play').hide();
-			$('#pause').show();
+
 			$('#duration').fadeIn(400);
 			showDuration();
 		}
 
 		function pause_music() {
 			audio.pause();
+			show_play_btn_after_click_on_pause($(this));
+		}
+		function show_play_btn_after_click_on_pause(this_elemtnt) {
 			$('#pause').hide();
 			$('#play').show();
+			$(this_elemtnt).hide();
+			$play_btn = $(this_elemtnt).closest('.play_and_pause').find('.click_play');
+			$play_btn.show();
+		}
+		function show_pause_btn_after_click_on_play(this_elemtnt) {
+			$('.pause_btn').hide();
+			$('.click_play').show();
+			$('#play').hide();
+			$('#pause').show();
+			$(this_elemtnt).hide();
+			$pause_btn = $(this_elemtnt).closest('.play_and_pause').find('.pause_btn');
+			$pause_btn.show();
+			$('#main_player').show();
 		}
 
 		function stop_music() {
@@ -81,12 +94,15 @@
 			$('#pause').hide();
 			$('#play').show();
 			$('#duration').fadeOut(400);
+			$('#main_player').hide();
+			$('.pause_btn').hide();
+			$('.click_play').show();
 		}
 
 		function next_song() {
 			audio.pause();
 			var next = $('#playlist').find('li.active').next();
-			if (next.length == 0) {
+			if (next.length === 0) {
 				next = $('#playlist').find('li:first-child');
 			}
 			initAudio(next);
@@ -137,23 +153,6 @@
 				}
 				$('.progress').css('width',value+'%');
 			});
-		}
-		function search_this_song() {
-			$search_val = $('#search_music').val();
-			// console.log($search_val);
-			var options = {
-				url: 'ajax/search.php',
-				type: 'POST',
-				data: { search_val : $search_val },
-				dataType: 'html'
-			};
-
-			$.ajax(options).always(_on_success);
-
-			function _on_success(response_text) {
-				$('#search_result').html(response_text);
-			}
-
 		}
 	}
 
