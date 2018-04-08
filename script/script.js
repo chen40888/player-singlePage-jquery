@@ -5,14 +5,13 @@
 
 	function _on_dom_ready() {
 		$(window.document)
-			.on('click', '#play', play_music)
-			.on('click', '#pause', pause_music)//Pause Button
+			.on('click', '#play, .click_play', play_music)
+			.on('click', '[href="#"]', _prevent_default)
+			.on('click', '#pause, .pause_btn', pause_music)//Pause Button
 			.on('click', '#next', next_song) //Next Button
 			.on('click', '#stop', stop_music) //Stop Button
 			.on('click', '#playlist li', playlist_song)
 			.on('change', '#volume', change_vol)
-			.on('click', '.click_play', play_music)
-			.on('click', '.pause_btn', pause_music)
 			.on('click', '#prev', prev_song);
 
 		var audio;
@@ -22,9 +21,6 @@
 		$('.pause_btn').hide();
 		$('#main_player').hide();
 
-		//Initializer - Play First Song
-		// מכניס את השיר הראשון שיש לו בליסט. אני לא צריך את זה ככה אני צריך שברגע שלוחצים play הוא מגיע לשם עם הרשימה
-		//initAudio($('#playlist').find('li:first-child'));
 
 		function initAudio(element){
 			var
@@ -32,6 +28,7 @@
 			title = element.text(),
 			cover = element.data('cover'),
 			artist = element.data('artist');
+			// console.log(element.length);
 
 			//Create a New Audio Object
 			audio = new Audio('media/' + song);
@@ -51,8 +48,12 @@
 			element.addClass('active');
 		}
 
-		function play_music() {
-			if(audio) pause_music();
+		function _prevent_default(e) {
+			e.preventDefault();
+		}
+
+		function play_music(event_object) {
+			if(audio) pause_music(); // הגנה מפני השמעה של כמה שירים במקביל
 			show_pause_btn_after_click_on_play($(this));
 
 			$playlist_wraper = $(this).closest('.playlist');
@@ -71,17 +72,19 @@
 			show_play_btn_after_click_on_pause($(this));
 		}
 		function show_play_btn_after_click_on_pause(this_elemtnt) {
-			$('#pause').hide();
+			$('.pause_btn, #pause').hide();
+			$('.click_play').show();
+			// $('#pause').hide();
 			$('#play').show();
 			$(this_elemtnt).hide();
 			$play_btn = $(this_elemtnt).closest('.play_and_pause').find('.click_play');
 			$play_btn.show();
 		}
 		function show_pause_btn_after_click_on_play(this_elemtnt) {
-			$('.pause_btn').hide();
-			$('.click_play').show();
-			$('#play').hide();
-			$('#pause').show();
+			$('.pause_btn, #play').hide();
+			$('.click_play, #pause').show();
+			// $('#play').hide();
+			// $('#pause').show();
 			$(this_elemtnt).hide();
 			$pause_btn = $(this_elemtnt).closest('.play_and_pause').find('.pause_btn');
 			$pause_btn.show();
@@ -91,11 +94,11 @@
 		function stop_music() {
 			audio.pause();
 			audio.currentTime = 0;
-			$('#pause').hide();
+			$('#pause, .pause_btn, #main_player').hide();
 			$('#play').show();
 			$('#duration').fadeOut(400);
-			$('#main_player').hide();
-			$('.pause_btn').hide();
+			// $('#main_player').hide();
+			// $('.pause_btn').hide();
 			$('.click_play').show();
 		}
 
@@ -138,7 +141,9 @@
 
 		//Time Duration
 		function showDuration(){
-			$(audio).on('timeupdate', function(){
+			$(audio).on('timeupdate', update_time);
+			console.log(audio.ended);//parseInt
+			function update_time (){
 				//Get hours and minutes
 				var s = parseInt(audio.currentTime % 60);
 				var m = parseInt((audio.currentTime / 60) % 60);
@@ -152,7 +157,7 @@
 					value = Math.floor((100 / audio.duration) * audio.currentTime);
 				}
 				$('.progress').css('width',value+'%');
-			});
+			}
 		}
 	}
 
