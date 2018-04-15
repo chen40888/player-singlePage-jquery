@@ -3,7 +3,7 @@
 if(!empty($_GET['404']) || empty($_GET['type']) || !in_array($_GET['type'],array('playlist','songs'))) {
 	fail(404);
 }
-
+include 'log.php';
 try {
 	// db connection
 	$servername = "localhost";
@@ -39,7 +39,7 @@ function playlist_item($id) {
 	switch($_SERVER['REQUEST_METHOD']) {
 		case 'GET':
 			$data = array();
-			$stmt = $conn->prepare("SELECT id,name,image FROM playlists WHERE id=:id");
+			$stmt = $conn->prepare("SELECT id,name,image,songs FROM playlists WHERE id=:id");
 			if ($stmt->execute(array('id' => $id))) {
 				$data = $stmt->fetch(PDO::FETCH_ASSOC);
 			}
@@ -74,15 +74,16 @@ function playlist_item($id) {
 
 function playlists() {
 	global $conn;
+
 	switch($_SERVER['REQUEST_METHOD']) {
 		case 'GET':
 			$data = array();
-			$stmt = $conn->prepare("SELECT id,name,image FROM playlists");
+			$stmt = $conn->prepare("SELECT id,name,image,songs FROM playlists");
 			if($stmt->execute()){
 				while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 						$data[] = $row;
 				}												
-			}			
+			}
 			response(TRUE,$data,TRUE);
 		break;
 		case 'POST':
@@ -107,6 +108,7 @@ function playlists() {
 					];
 				}				
 			}
+			Log::w($data);
 			response($okresult,$data);
 		break;
 		default:
@@ -116,6 +118,7 @@ function playlists() {
 }
 function playlist_songs($id) {
 	global $conn;
+
 	switch($_SERVER['REQUEST_METHOD']) {
 		case 'GET':
 			$data = array();
@@ -123,6 +126,7 @@ function playlist_songs($id) {
 			if ($stmt->execute(array('id' => $id))) {
 				$data = $stmt->fetch(PDO::FETCH_ASSOC);
 			}
+
 			response(TRUE,[
 					'songs' => empty($data['songs']) ? [] : json_decode($data['songs'],TRUE)
 			]);

@@ -3,6 +3,10 @@
 	window.App = (window.App || {});
 	var $ = window.jQuery;
 
+	window.isset = isset;
+	window.is_defined = is_defined;
+	$(_on_dom_ready);
+
 	function _on_dom_ready() {
 		$(window.document)
 			.on('click', '#play, .click_play', play_music)
@@ -31,7 +35,7 @@
 			// console.log(element.length);
 
 			//Create a New Audio Object
-			audio = new Audio('media/' + song);
+			audio = new Audio(song);
 
 			if(!audio.currentTime){
 				$('#duration').html('0.00');
@@ -42,7 +46,7 @@
 				.find('.artist').text(artist);
 
 			//Insert Cover Image
-			$('img.cover').attr('src','images/covers/' + cover);
+			$('img.cover').attr('src', cover);
 
 			$('#playlist').find('li').removeClass('active');
 			element.addClass('active');
@@ -161,6 +165,31 @@
 		}
 	}
 
-	$(_on_dom_ready);
+	/**
+	 * Provided an object and a string representing a nested property, isset returns true when all parts are set
+	 *
+	 * http://stackoverflow.com/questions/4343028/in-javascript-test-for-property-deeply-nested-in-object-graph
+	 * @param {object} object
+	 * @param {string} nested_property_string
+	 * @returns {boolean}
+	 */
+	function isset(object, nested_property_string) {
+		var parts = (typeof nested_property_string == 'string' && nested_property_string.split('.')),
+			current = object;
+
+		if(!parts) return false;
+		for(var i = 0; i < parts.length; i++) {
+			if(!current || !current[parts[i]]) {
+				return false;
+			}
+			current = current[parts[i]];
+		}
+		return true;
+	}
+
+	function is_defined(value) {
+		return (typeof value != 'undefined');
+	}
+
 })(window);
 
