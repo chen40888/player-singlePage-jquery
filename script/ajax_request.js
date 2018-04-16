@@ -16,10 +16,28 @@
 		$(window.document)
 			.on('click', '#save_playlist', save_this_playlist)
 			// .on('click', '#btn_step_1', _save_playlist_name_and_url)
-			.on('blur', '#playlist_url', _show_image)
+			.on('click', '#preview', _show_image)
+			.on('click', '#delete_this_playlist', delete_from_db)
 			.on('blur', '#search_music', search_this_song);
 
-		function _show_image() {
+		function delete_from_db() {
+		$id_to_delete = $(this).attr('data-delete');
+			window.App.delete_playlist($id_to_delete, _on_delete_playlist_success);
+			$('#id_' + $id_to_delete).remove();
+
+			function _on_delete_playlist_success(response) {
+				$('#message').show();
+				setTimeout(function(){ $('#message').hide(); }, 4000);
+
+				console.log(response);
+
+			}
+
+		}
+
+
+		function _show_image(e) {
+			e.preventDefault();
 			$playlist_url_image = $('#playlist_url').val();
 			$('#hook_image_for_playlist').attr('src', $playlist_url_image);
 		}
@@ -45,10 +63,6 @@
 						// log(playlist_id);
 					create_playlist(playlist_id);
 				}
-
-
-					// log(response);
-
 			}
 
 		}
@@ -113,13 +127,10 @@
 
 			after_submit_form();
 
-			// log($arr);
-
-			console.log(playlist_object);
 			window.App.send('playlist', true, playlist_object, _on_post_playlist_success);
 
 			function _on_post_playlist_success(response) {
-				console.log(response);
+				// console.log(response);
 				var playlist_id = (isset(response, 'data.id') ? response.data.id : 0);
 
 				if(playlist_id) create_playlist(playlist_id);
@@ -168,7 +179,11 @@
 					// .find('.playlist_btns')
 					// .find('a').attr('[data-del]', playlist_id);
 
-				// $clone.find('.playlist_btns').find('a').data('del','gdfdddgddfgd');
+				$clone
+					.find('.playlist_btns')
+					.find('a')
+					.attr('data-del',playlist_id)
+					.attr('data-name',$playlist_name);
 
 				$hook_playlist.append($clone);
 				// new CircleType(document.getElementById('id_' + playlist_id)).radius(100);

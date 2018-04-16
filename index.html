@@ -80,7 +80,7 @@
 		<h2 class="song_name_header"></h2>
 		<div class="playlist_content">
 			<div class="playlist_btns">
-				<a href="#" data-toggle="modal" data-target="#del_user" data-del=""><span class="glyphicon glyphicon-trash delete_playlist"></span></a>
+				<a href="#" class="hook_for_delete" data-toggle="modal" data-target="#del_user" data-del=""><span class="glyphicon glyphicon-trash delete_playlist"></span></a>
 				<a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
 				<a href="#" class="play_and_pause">
 					<span class="glyphicon glyphicon-play click_play"></span>
@@ -115,6 +115,7 @@
 						<input class="form-control" type="text" id="playlist_url">
 						<img id="hook_image_for_playlist" src="">
 						<button id="btn_step_1" class="form-control">Next</button>
+						<button id="preview" class="form-control">preview</button>
 					</div>
 					<div id="step_2" class="hide">
 						<div id="songs_urls">
@@ -160,10 +161,10 @@
 				<h4 class="modal-title">Delete Playlist</h4>
 			</div>
 			<div class="modal-body">
-				<p>are you sure u want to delete playlist <span id="user_name"></span></p>
+				<p>are you sure u want to delete playlist <span id="this_playlist_name"></span></p>
 			</div>
 			<div class="modal-footer">
-				<button id="delete_this_user" type="button" data-delete="" class="btn btn-danger">Yes</button>
+				<button id="delete_this_playlist" type="button" data-dismiss="modal" class="btn btn-danger">Yes</button>
 
 				<button type="button" class="btn btn-success" data-dismiss="modal">No</button>
 			</div>

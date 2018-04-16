@@ -223,7 +223,7 @@ function deleteFunction(x) {
 
 $('#formDeleteList').submit(function(e) {
     $.ajax({
-        url: 'http://localhost:8888/playList/api.php/?type=playlist&&id=' + target,
+        url: 'http://api.local/api/playlist/?type=playlist&&id=1,
         type: 'DELETE',
         success: function(result) {
             $('#deletePlayList').modal('hide');

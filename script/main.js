@@ -8,8 +8,8 @@
 			.on('click', '#btn_step_1', next_step_to_save)
 			.on('click', '#prev_to_playlist_name', prev_to_change_playlist_name)
 			.on('click', '#add_song', add_more_col)
-			.on('click', '.delete_playlist', delete_this_playlist)
-			// .on('click', '#add_song', add_more_col)
+			// .on('click', '.delete_playlist', delete_this_playlist)
+			.on('click', '.hook_for_delete', delete_this_playlist)
 			.on('blur', '.url_for_song', regexp_for_mp3)
 			.on('blur', '.name_for_song', regexp_for_name);
 
@@ -19,8 +19,15 @@
 			$('#songs_urls').append($new_input);
 		}
 
-		function delete_this_playlist() {
-			$('#message').show();
+		function delete_this_playlist(e) {
+			e.preventDefault();
+			var
+				$id_to_delete = $(this),
+				this_name = $id_to_delete.data('name'),
+				this_id = $id_to_delete.data('del');
+
+			$('#this_playlist_name').html(this_name);
+			$('#delete_this_playlist').attr('data-delete', this_id);
 		}
 
 		function regexp_for_name() {

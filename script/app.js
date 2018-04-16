@@ -4,6 +4,7 @@
 
 	window.App = {};
 	window.App.send = send;
+	window.App.delete_playlist = delete_playlist;
 
 	function send(command, is_post, request, callback) {
 		var options = {
@@ -11,6 +12,21 @@
 			// 'http://api.local/api/playList/api.php/?type=playlist',
 			type: (is_post ? 'POST' : 'GET'),
 			data: request,
+			dataType: 'json'
+		};
+
+		// log('command: ' + command + ' | is_post: ' + is_post);
+		$.ajax(options).always(_on_response);
+
+		function _on_response(response) {
+			if(callback) callback(response);
+		}
+	}
+
+	function delete_playlist(command, callback) {
+		var options = {
+			url: 'http://api.local/api/playlist/?type=playlist&&id=' + command,
+			type: 'DELETE',
 			dataType: 'json'
 		};
 
