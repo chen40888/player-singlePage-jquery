@@ -21,3 +21,13 @@
 2018-04-16 17:16:50 | playlist.php/playlists/111 |  | Associative Array: {
     "id": "17"
 }
+2018-04-16 17:51:30 | playlist.php/playlists/111 |  | Associative Array: {
+    "id": "18"
+}
+2018-04-16 17:51:51 | playlist.php/playlists/111 |  | Associative Array: {
+    "id": "19"
+}
+2018-04-16 17:52:06 | playlist.php/playlists/111 |  | Associative Array: {
+    "id": "20"
+}
+2018-04-16 21:36:29 | playlist.php/playlists/111 | Was called...

@@ -7,12 +7,20 @@
 		$(window.document)
 			.on('click', '#btn_step_1', next_step_to_save)
 			.on('click', '#prev_to_playlist_name', prev_to_change_playlist_name)
+			.on('click', '.edit_playlist', bring_playlist_data)
 			.on('click', '#add_song', add_more_col)
 			// .on('click', '.delete_playlist', delete_this_playlist)
 			.on('click', '.hook_for_delete', delete_this_playlist)
 			.on('blur', '.url_for_song', regexp_for_mp3)
 			.on('blur', '.name_for_song', regexp_for_name);
 
+		function bring_playlist_data() {
+		var	$id_to_update = $(this).closest('.playlist').attr('id');
+			$id_to_update = $id_to_update.split("_")[1];
+		$('#btn_step_1').attr('data-edit', $id_to_update);
+
+		$('#myModal').attr('data-new', false);
+		}
 		function add_more_col(e) {
 			e.preventDefault();
 			var $new_input ='<div class="url_song_input"><div class="col-xs-6"><label>Song Url :</label><input class="form-control url_for_song" type="text"></div><div class="col-xs-6"><label>Song Name :</label><input class="form-control name_for_song" type="text"></div></div>';
@@ -63,6 +71,15 @@
 
 		function next_step_to_save(e) {
 			e.preventDefault();
+			// $btn = $(this).data('edit');
+			var is_new = $('#myModal').data('new');
+
+			console.log(is_new);
+
+			// if(isset($btn)) {
+			// 	console.log('isset');
+			// 	// need to save step_1
+			// }
 			$('#setp_1').addClass('hide');
 			$('#step_2').removeClass('hide');
 		}

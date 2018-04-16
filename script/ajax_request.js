@@ -9,8 +9,6 @@
 			$playlist_url_image,
 			playlist_object = {};
 
-
-		// create_playlist(1);
 		_bring_all_playlists();
 
 		$(window.document)
@@ -21,20 +19,21 @@
 			.on('blur', '#search_music', search_this_song);
 
 		function delete_from_db() {
-		$id_to_delete = $(this).attr('data-delete');
+			$id_to_delete = $(this).attr('data-delete');
 			window.App.delete_playlist($id_to_delete, _on_delete_playlist_success);
 			$('#id_' + $id_to_delete).remove();
 
 			function _on_delete_playlist_success(response) {
 				$('#message').show();
-				setTimeout(function(){ $('#message').hide(); }, 4000);
+				setTimeout(function() {
+					$('#message').hide();
+				}, 4000);
 
 				console.log(response);
 
 			}
 
 		}
-
 
 		function _show_image(e) {
 			e.preventDefault();
@@ -46,21 +45,14 @@
 			window.App.send('playlist', false, {}, _on_get_playlist_success);
 
 			function _on_get_playlist_success(response) {
-				log(response);
-				// var $all_playlists_object = JSON.parse(response);
+				// log(response);
 				var $playlist_data = response.data;
 				if(!isset($playlist_data, 'length')) return;
 
-				// log(response);
-				// log($all_playlists_object);
-				// log($playlist_data[0].songs);
-				// log($playlist_data.songs);
-				// $all_playlists_object = $all_playlists_object.data;
-
 				var index = 0;
 				for(index; index < $playlist_data.length; index++) {
-				var playlist_id = $playlist_data[index].id;
-						// log(playlist_id);
+					var playlist_id = $playlist_data[index].id;
+					// log(playlist_id);
 					create_playlist(playlist_id);
 				}
 			}
@@ -145,8 +137,6 @@
 
 			function _on_get_playlist_id_success(playlist_object) {
 				// console.log(playlist_object);
-				// playlist_object = JSON.parse(playlist_object);
-				// log(JSON.parse(playlist_object.songs));
 				playlist_object = playlist_object.data;
 				var $playlist_name = playlist_object.name,
 					$playlist_image = playlist_object.image,
@@ -156,18 +146,11 @@
 					$clone = $($('#hook_playlist_template').html()),
 					$song_name, $song_url;
 
-				// log(playlist_object);
-				// log($songs_array);
-				// log($playlist_name);
-
 				if(!isset($songs_array, 'length')) return;
 
 				for(index; index < $songs_array.length; index++) {
 					$song_name = $songs_array[index].name;
 					$song_url = $songs_array[index].url;
-
-
-					// <li data-song="two.mp3" data-cover="cover1.jpg" data-artist="Linkin Park">With two.mp3</li>
 
 					$clone.find('ul').append('<li data-song="' + $song_url + '" data-cover="' + $playlist_image + '"></li>').find('li').eq(index).html($song_name);
 				}
@@ -175,15 +158,11 @@
 				$clone
 					.attr('id', 'id_' + playlist_id)
 					.find('.song_name_header').html($playlist_name);
-					// .end()
-					// .find('.playlist_btns')
-					// .find('a').attr('[data-del]', playlist_id);
 
 				$clone
-					.find('.playlist_btns')
-					.find('a')
-					.attr('data-del',playlist_id)
-					.attr('data-name',$playlist_name);
+					.find('.playlist_btns').find('a')
+					.attr('data-del', playlist_id)
+					.attr('data-name', $playlist_name);
 
 				$hook_playlist.append($clone);
 				// new CircleType(document.getElementById('id_' + playlist_id)).radius(100);
