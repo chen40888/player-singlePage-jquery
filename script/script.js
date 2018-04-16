@@ -1,6 +1,5 @@
 (function(window) {
 
-	window.App = (window.App || {});
 	var $ = window.jQuery;
 
 	window.isset = isset;
@@ -174,7 +173,7 @@
 	 * @returns {boolean}
 	 */
 	function isset(object, nested_property_string) {
-		var parts = (typeof nested_property_string == 'string' && nested_property_string.split('.')),
+		var parts = (typeof nested_property_string === 'string' && nested_property_string.split('.')),
 			current = object;
 
 		if(!parts) return false;
@@ -188,7 +187,7 @@
 	}
 
 	function is_defined(value) {
-		return (typeof value != 'undefined');
+		return (typeof value !== 'undefined');
 	}
 
 })(window);

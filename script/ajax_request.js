@@ -25,35 +25,29 @@
 		}
 
 		function _bring_all_playlists() {
-			// console.log('here');
+			window.App.send('playlist', false, {}, _on_get_playlist_success);
 
-			var options = {
-				url: 'http://api.local/api/playList/api.php/?type=playlist',
-				type: 'GET',
-				dataType: 'json'
-			};
+			function _on_get_playlist_success(response) {
+				log(response);
+				// var $all_playlists_object = JSON.parse(response);
+				var $playlist_data = response.data;
+				if(!isset($playlist_data, 'length')) return;
 
-			$.ajax(options).always(_on_success);
-
-			function _on_success(response_text) {
-				// console.log(response_text);
-				// var $all_playlists_object = JSON.parse(response_text);
-				var $playlist_data = response_text.data;
-				// console.log(response_text);
-				// console.log($all_playlists_object);
-				// console.log($playlist_data[0].songs);
-				// console.log($playlist_data.songs);
+				// log(response);
+				// log($all_playlists_object);
+				// log($playlist_data[0].songs);
+				// log($playlist_data.songs);
 				// $all_playlists_object = $all_playlists_object.data;
 
 				var index = 0;
 				for(index; index < $playlist_data.length; index++) {
 				var playlist_id = $playlist_data[index].id;
-						// console.log(playlist_id);
+						// log(playlist_id);
 					create_playlist(playlist_id);
 				}
 
 
-					// console.log(response_text);
+					// log(response);
 
 			}
 
@@ -73,7 +67,7 @@
 
 		function search_this_song() {
 			$search_val = $('#search_music').val();
-			// console.log($search_val);
+			// log($search_val);
 			var options = {
 				url: 'ajax/search.php',
 				type: 'POST',
@@ -95,7 +89,7 @@
 				$playlist_name = $('#playlist_name').val(),
 				$playlist_url_image = $('#playlist_url').val(),
 				$songs_array = $('#songs_urls').find('.url_song_input');
-			// console.log($a);
+			// log($a);
 			var $songs_arr = [];
 			$songs_array.each(get_this_name_and_url);
 
@@ -119,36 +113,30 @@
 
 			after_submit_form();
 
-			// console.log($arr);
+			// log($arr);
 
-			var options = {
-				url: 'http://api.local/api/playList/api.php/?type=playlist',
-				type: 'POST',
-				data: playlist_object,
-				dataType: 'html'
-			};
+			console.log(playlist_object);
+			window.App.send('playlist', true, playlist_object, _on_post_playlist_success);
 
-			$.ajax(options).always(_on_success);
+			function _on_post_playlist_success(response) {
+				console.log(response);
+				var playlist_id = (isset(response, 'data.id') ? response.data.id : 0);
 
-			function _on_success(response_text) {
-				// console.log(response_text);
-				$event_object = JSON.parse(response_text);
-				$playlist_id = $event_object.data.id;
-
-
-				// console.log($playlist_object);
-
-				create_playlist($playlist_id);
+				if(playlist_id) create_playlist(playlist_id);
+				log(playlist_id);
 			}
-
 		}
 
-		function create_playlist($playlist_id) {
-			get_playlist_object_from_server($playlist_id, _on_success_callback);
+		function create_playlist(playlist_id) {
+			window.App.send('playlist&&id=' + playlist_id, false, {}, _on_get_playlist_id_success);
 
-			function _on_success_callback(playlist_object) {
+			// get_playlist_object_from_server(playlist_id, _on_get_playlist_id_success);
+
+			function _on_get_playlist_id_success(playlist_object) {
+				// console.log(playlist_object);
 				// playlist_object = JSON.parse(playlist_object);
-				// console.log(JSON.parse(playlist_object.songs));
+				// log(JSON.parse(playlist_object.songs));
+				playlist_object = playlist_object.data;
 				var $playlist_name = playlist_object.name,
 					$playlist_image = playlist_object.image,
 					$songs_array = JSON.parse(playlist_object.songs),
@@ -157,17 +145,15 @@
 					$clone = $($('#hook_playlist_template').html()),
 					$song_name, $song_url;
 
-				// console.log(playlist_object);
-				// console.log($songs_array.length);
-				// console.log($playlist_name);
+				// log(playlist_object);
+				// log($songs_array);
+				// log($playlist_name);
 
 				if(!isset($songs_array, 'length')) return;
 
 				for(index; index < $songs_array.length; index++) {
 					$song_name = $songs_array[index].name;
 					$song_url = $songs_array[index].url;
-					// console.log($song_url);
-					// console.log($songs_array[index]);//wtfffff?????????????
 
 
 					// <li data-song="two.mp3" data-cover="cover1.jpg" data-artist="Linkin Park">With two.mp3</li>
@@ -176,25 +162,17 @@
 				}
 
 				$clone
-					.attr('id', 'id_' + $playlist_id)
+					.attr('id', 'id_' + playlist_id)
 					.find('.song_name_header').html($playlist_name);
-					// .attr('id','title_' + $playlist_id);
+					// .end()
+					// .find('.playlist_btns')
+					// .find('a').attr('[data-del]', playlist_id);
 
+				// $clone.find('.playlist_btns').find('a').data('del','gdfdddgddfgd');
 
 				$hook_playlist.append($clone);
-			}
-		}
+				// new CircleType(document.getElementById('id_' + playlist_id)).radius(100);
 
-		function get_playlist_object_from_server($id, _callback_success) {
-			$.ajax({
-				url: 'http://api.local/api/playList/api.php/?type=playlist&&id=' + $id,
-				type: 'GET',
-				dataType: 'json'
-			}).always(_parse_response);
-
-			function _parse_response(response){
-				// console.log(response);
-				_callback_success(isset(response, 'data') ? response.data : {});
 			}
 		}
 
