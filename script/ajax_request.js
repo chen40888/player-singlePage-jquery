@@ -16,7 +16,13 @@
 			// .on('click', '#btn_step_1', _save_playlist_name_and_url)
 			.on('click', '#preview', _show_image)
 			.on('click', '#delete_this_playlist', delete_from_db)
+			.on('show.bs.modal','#myModal', check_if_need_to_bring_user_to_update)
 			.on('blur', '#search_music', search_this_song);
+
+		function check_if_need_to_bring_user_to_update() {
+			$id_to_update = $('#btn_step_1').data('edit');
+			console.log($id_to_update);
+		}
 
 		function delete_from_db() {
 			$id_to_delete = $(this).attr('data-delete');
@@ -91,12 +97,37 @@
 
 		function save_this_playlist(e) {
 			e.preventDefault();
+			var $songs_arr = [];
+			var $is_update_playlist = $('#btn_step_1').data('edit');
+			if($is_update_playlist) {
+				alert();
+				var
+					$songs_array = $('#songs_urls').find('.url_song_input');
+					// $songs_arr = [];
+
+				$songs_array.each(get_this_name_and_url);
+console.log('$songs_arr');
+console.log($songs_arr);
+				$songs ={
+					songs: $songs_arr
+				};
+
+				window.App.send('playlist&&id=' + $id_to_update + '/songs', true, $songs, _on_update_songs);
+				return;
+
+
+				function _on_update_songs(response) {
+					console.log(response);
+					$('#btn_step_1').removeAttr('data-edit');
+				}
+
+			}
 			var
 				$playlist_name = $('#playlist_name').val(),
 				$playlist_url_image = $('#playlist_url').val(),
 				$songs_array = $('#songs_urls').find('.url_song_input');
 			// log($a);
-			var $songs_arr = [];
+			// var $songs_arr = [];
 			$songs_array.each(get_this_name_and_url);
 
 			function get_this_name_and_url() {

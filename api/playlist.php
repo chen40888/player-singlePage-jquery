@@ -4,6 +4,7 @@ if(!empty($_GET['404']) || empty($_GET['type']) || !in_array($_GET['type'],array
 	fail(404);
 }
 include 'log.php';
+//log::w();
 try {
 	// db connection
 	$servername = "localhost";
@@ -25,7 +26,9 @@ try {
 	}
 	else {
 		// songs
-		playlist_songs($_GET['id']);			
+		Log::w($_GET['id']);
+		playlist_songs($_GET['id']);
+		log::w(playlist_songs($_GET['id']));
 	}
 }
 catch(PDOException $e) {
@@ -134,6 +137,8 @@ function playlist_songs($id) {
 		case 'POST':
 		  $okresult = false;
 			$p =& $_POST;
+			log::w($p);
+
 			if( !empty($p['songs']) && is_array($p['songs']) ) {				
 				$okresult = true;
 				$c = count($p['songs']);

@@ -5,11 +5,10 @@
 
 	function _on_dom_ready() {
 		$(window.document)
-			.on('click', '#btn_step_1', next_step_to_save)
+			.on('click', '#btn_step_1', next_step_to_save_or_update)
 			.on('click', '#prev_to_playlist_name', prev_to_change_playlist_name)
 			.on('click', '.edit_playlist', bring_playlist_data)
 			.on('click', '#add_song', add_more_col)
-			// .on('click', '.delete_playlist', delete_this_playlist)
 			.on('click', '.hook_for_delete', delete_this_playlist)
 			.on('blur', '.url_for_song', regexp_for_mp3)
 			.on('blur', '.name_for_song', regexp_for_name);
@@ -18,9 +17,42 @@
 		var	$id_to_update = $(this).closest('.playlist').attr('id');
 			$id_to_update = $id_to_update.split("_")[1];
 		$('#btn_step_1').attr('data-edit', $id_to_update);
+			window.App.send('playlist&&id=' + $id_to_update, false, {}, _on_bring_user_to_update);
+
+			function _on_bring_user_to_update(response) {
+				var playlist_object = response.data;
+				console.log(playlist_object);
+
+				var $playlist_name = playlist_object.name,
+					$playlist_image = playlist_object.image,
+					$songs_array = JSON.parse(playlist_object.songs),
+					index = 0,
+					$song_name, $song_url;
+
+				$('#playlist_name').val($playlist_name);
+				$('#playlist_url').val($playlist_image);
+				console.log($songs_array.length);
+
+				$('#songs_urls').html('');
+
+				for(index; index < $songs_array.length; index++) {
+					$song_name = $songs_array[index].name;
+					$song_url = $songs_array[index].url;
+
+					$('#songs_urls').append(add_song_to_edit($song_url, $song_name));
+				}
+
+			}
 
 		$('#myModal').attr('data-new', false);
 		}
+
+		function add_song_to_edit($song_url, $song_name) {
+			var $new_input ='<div class="url_song_input"><div class="col-xs-6"><label>Song Url :</label><input class="form-control url_for_song" value="' + $song_url + '" type="text"></div><div class="col-xs-6"><label>Song Name :</label><input class="form-control name_for_song" type="text" value="' + $song_name + '"></div></div>';
+			$('#songs_urls').append($new_input);
+			return false
+		}
+
 		function add_more_col(e) {
 			e.preventDefault();
 			var $new_input ='<div class="url_song_input"><div class="col-xs-6"><label>Song Url :</label><input class="form-control url_for_song" type="text"></div><div class="col-xs-6"><label>Song Name :</label><input class="form-control name_for_song" type="text"></div></div>';
@@ -69,21 +101,40 @@
 
 		}
 
-		function next_step_to_save(e) {
+		function next_step_to_save_or_update(e) {
 			e.preventDefault();
-			// $btn = $(this).data('edit');
-			var is_new = $('#myModal').data('new');
+			$id_to_update = $(this).data('edit');//שאני מסיים עם השמירה להעיף את זה
 
-			console.log(is_new);
+			var $playlist_name = $('#playlist_name').val(),
+				$playlist_url_image = $('#playlist_url').val();
 
-			// if(isset($btn)) {
-			// 	console.log('isset');
-			// 	// need to save step_1
-			// }
+			playlist_object = {
+				name: $playlist_name,
+				image: $playlist_url_image
+			};
+
+			// console.log($btn);
+			if($id_to_update) {
+				window.App.send('playlist&&id=' + $id_to_update, true, playlist_object, _on_update_name_and_image);
+
+				function _on_update_name_and_image(w) {
+					// console.log(w);
+					$('#id_' + $id_to_update)
+						.find('li').attr('data-cover', $playlist_url_image).end()
+				.find('.song_name_header').html($playlist_name)
+
+				}
+
+				// save_name_and_image_playlist($id_to_update);
+			}
+
 			$('#setp_1').addClass('hide');
 			$('#step_2').removeClass('hide');
 		}
 
+		// function save_name_and_image_playlist($id_to_update) {
+		//
+		// }
 		function prev_to_change_playlist_name(e) {
 			e.preventDefault();
 			$('#setp_1').removeClass();

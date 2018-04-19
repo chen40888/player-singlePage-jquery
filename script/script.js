@@ -7,6 +7,7 @@
 	$(_on_dom_ready);
 
 	function _on_dom_ready() {
+
 		$(window.document)
 			.on('click', '#play, .click_play', play_music)
 			.on('click', '[href="#"]', _prevent_default)
@@ -89,7 +90,9 @@
 			// $('#play').hide();
 			// $('#pause').show();
 			$(this_elemtnt).hide();
+			console.log(this_elemtnt);
 			$pause_btn = $(this_elemtnt).closest('.play_and_pause').find('.pause_btn');
+			console.log(this_elemtnt.closest('body'));
 			$pause_btn.show();
 			$('#main_player').show();
 		}

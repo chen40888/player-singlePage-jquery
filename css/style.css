@@ -232,3 +232,7 @@ h2 span {
 	position: absolute;
 	transform: translate(-50%, -50%);
 }
+.playlist_image {
+	width: 100%;
+	margin: 8px 0;
+}
