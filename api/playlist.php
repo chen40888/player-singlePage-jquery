@@ -26,9 +26,9 @@ try {
 	}
 	else {
 		// songs
-		Log::w($_GET['id']);
+//		Log::w($_GET['id']);
 		playlist_songs($_GET['id']);
-		log::w(playlist_songs($_GET['id']));
+//		log::w(playlist_songs($_GET['id']));
 	}
 }
 catch(PDOException $e) {

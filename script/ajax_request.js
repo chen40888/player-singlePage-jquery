@@ -107,19 +107,35 @@
 
 				$songs_array.each(get_this_name_and_url);
 console.log('$songs_arr');
-console.log($songs_arr);
+// console.log($songs_arr);
 				$songs ={
 					songs: $songs_arr
 				};
+				console.log($songs);
 
-				window.App.send('playlist&&id=' + $id_to_update + '/songs', true, $songs, _on_update_songs);
-				return;
+					var options = {
+						url: 'http://api.local/api/type=playList?id=' + $is_update_playlist + '/songs',
+						// 'http://api.local/api/playList/api.php/?type=playlist',
+						type: 'POST',
+						data: $songs,
+						dataType: 'html'
+					};
 
+				// log('command: ' + command + ' | is_post: ' + is_post);
+				$.ajax(options).always(_on_response);
 
-				function _on_update_songs(response) {
+				function _on_response(response) {
 					console.log(response);
-					$('#btn_step_1').removeAttr('data-edit');
 				}
+
+				// window.App.send('playlist&&id=' + $id_to_update + '/songs', true, $songs, _on_update_songs);
+				// return;
+
+
+				// function _on_update_songs(response) {
+				// 	console.log(response);
+				// 	$('#btn_step_1').removeAttr('data-edit');
+				// }
 
 			}
 			var
@@ -138,8 +154,9 @@ console.log($songs_arr);
 					name: $name,
 					url: $url
 				};
-
+				// console.log($song_object);
 				$songs_arr.push($song_object);
+				// console.log($songs_arr)
 			}
 
 			playlist_object = {
