@@ -2,10 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41075d25-eb93-407e-9049-c3dd34d9e906" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/ajax/playlist.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ajax/search.php" afterPath="" />
       <change beforePath="$PROJECT_DIR$/api/playlist.php" afterPath="$PROJECT_DIR$/api/playlist.php" />
-      <change beforePath="$PROJECT_DIR$/logs/log-2018-04-19.php" afterPath="$PROJECT_DIR$/logs/log-2018-04-19.php" />
+      <change beforePath="$PROJECT_DIR$/images/covers/Thumbs.db" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/images/covers/cover1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change beforePath="$PROJECT_DIR$/logs/log-2018-04-19.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/media/06 The Piano Guys - All of Me.mp3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/media/08 The Piano Guys - Waterfall.mp3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/media/09 The Piano Guys - Charlie Brown Medley.mp3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/media/10 The Piano Guys - Me and My Cello (Happy Together).mp3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/media/Coldplay - Violet Hill.wma" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/media/Coldplay - Yellow.mp3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/media/one.mp3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/media/two.mp3" afterPath="" />
       <change beforePath="$PROJECT_DIR$/script/ajax_request.js" afterPath="$PROJECT_DIR$/script/ajax_request.js" />
+      <change beforePath="$PROJECT_DIR$/script/app.js" afterPath="$PROJECT_DIR$/script/app.js" />
+      <change beforePath="$PROJECT_DIR$/script/log.v1.00.js" afterPath="$PROJECT_DIR$/script/log.v1.00.js" />
+      <change beforePath="$PROJECT_DIR$/script/main.js" afterPath="$PROJECT_DIR$/script/main.js" />
+      <change beforePath="$PROJECT_DIR$/script/script.js" afterPath="$PROJECT_DIR$/script/script.js" />
     </list>
     <ignored path="Api.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,8 +56,8 @@
       <file leaf-file-name="ajax_request.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/script/ajax_request.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4620">
-              <caret line="231" column="0" lean-forward="false" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
+            <state relative-caret-position="-1939">
+              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -50,27 +66,17 @@
       <file leaf-file-name="playlist.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/playlist.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2780">
-              <caret line="139" column="23" lean-forward="false" selection-start-line="139" selection-start-column="23" selection-end-line="139" selection-end-column="23" />
+            <state relative-caret-position="-520">
+              <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
               <folding>
-                <marker date="1524163453634" expanded="true" signature="951:1005" ph="SELECT id,na... playlists" />
-                <marker date="1524163453634" expanded="true" signature="1423:1544" ph="UPDATE playlists... " />
-                <marker date="1524163453634" expanded="true" signature="1655:1689" ph="DELETE FROM playlists... " />
-                <marker date="1524163453634" expanded="true" signature="1940:1981" ph="SELECT id,na... playlists" />
-                <marker date="1524163453634" expanded="true" signature="2558:2627" ph="INSERT INTO playlists... " />
-                <marker date="1524163453634" expanded="true" signature="3089:3132" ph="SELECT id,so... playlists" />
-                <marker date="1524163453634" expanded="true" signature="3705:3751" ph="UPDATE playlists... " />
+                <marker date="1524229195815" expanded="true" signature="916:970" ph="SELECT id,na... playlists" />
+                <marker date="1524229195815" expanded="true" signature="1469:1590" ph="UPDATE playlists... " />
+                <marker date="1524229195815" expanded="true" signature="1701:1735" ph="DELETE FROM playlists... " />
+                <marker date="1524229195815" expanded="true" signature="1984:2025" ph="SELECT id,na... playlists" />
+                <marker date="1524229195815" expanded="true" signature="2748:2817" ph="INSERT INTO playlists... " />
+                <marker date="1524229195815" expanded="true" signature="3274:3317" ph="SELECT id,so... playlists" />
+                <marker date="1524229195815" expanded="true" signature="3906:3952" ph="UPDATE playlists... " />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="log-2018-04-19.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/logs/log-2018-04-19.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -78,10 +84,10 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1900">
+            <state relative-caret-position="1139">
               <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
               <folding>
-                <element signature="e#5430#5437#1" expanded="true" />
+                <element signature="e#5567#5574#1" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -90,7 +96,7 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4220">
+            <state relative-caret-position="779">
               <caret line="211" column="1" lean-forward="false" selection-start-line="211" selection-start-column="1" selection-end-line="211" selection-end-column="1" />
               <folding />
             </state>
@@ -100,18 +106,18 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/script/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state relative-caret-position="-260">
+              <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/script/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="22" selection-end-column="9" />
+            <state relative-caret-position="340">
+              <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -128,7 +134,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>isset</find>
       <find>dataType:</find>
       <find>add</find>
       <find>new</find>
@@ -158,6 +163,7 @@
       <find>hook_playlist</find>
       <find>if(</find>
       <find>update</find>
+      <find>tipul</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -174,10 +180,10 @@
         <option value="$PROJECT_DIR$/script/main.js" />
         <option value="$PROJECT_DIR$/script/datastore.js" />
         <option value="$PROJECT_DIR$/ajax/playlist.php" />
-        <option value="$PROJECT_DIR$/script/app.js" />
-        <option value="$PROJECT_DIR$/api/playlist.php" />
         <option value="$PROJECT_DIR$/script/ajax_request.js" />
         <option value="$PROJECT_DIR$/logs/log-2018-04-19.php" />
+        <option value="$PROJECT_DIR$/api/playlist.php" />
+        <option value="$PROJECT_DIR$/script/app.js" />
       </list>
     </option>
   </component>
@@ -208,6 +214,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -224,23 +231,17 @@
             <path>
               <item name="Api" type="b2602c69:ProjectViewProjectNode" />
               <item name="Api" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="logs" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Api" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="script" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/apii" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="SearchEverywhereHistoryKey" value=".css&#9;FILE&#9;file://D:/work/Api/css/style.css&#10;sc&#9;FILE&#9;file://D:/work/Api/script/script.js&#10;main.js&#9;FILE&#9;file://D:/work/Api/script/main.js" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="FullScreen" value="false" />
@@ -314,21 +315,23 @@
       <workItem from="1524141612566" duration="15883000" />
       <workItem from="1524228443156" duration="449000" />
       <workItem from="1524228895696" duration="8000" />
+      <workItem from="1524229172750" duration="689000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99532000" />
+    <option name="totallyTimeSpent" value="100221000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1783029" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18098818" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -342,7 +345,6 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -367,16 +369,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2140">
-          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="145" selection-end-column="18" />
-          <folding>
-            <element signature="e#5430#5437#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/script/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2280">
@@ -411,7 +403,7 @@
         <state relative-caret-position="480">
           <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
           <folding>
-            <element signature="e#5430#5437#1" expanded="true" />
+            <element signature="e#5567#5574#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -450,7 +442,7 @@
         <state relative-caret-position="0">
           <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
           <folding>
-            <element signature="e#5430#5437#1" expanded="true" />
+            <element signature="e#5567#5574#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -481,7 +473,7 @@
         <state relative-caret-position="0">
           <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
           <folding>
-            <element signature="e#5430#5437#1" expanded="true" />
+            <element signature="e#5567#5574#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -519,7 +511,7 @@
         <state relative-caret-position="0">
           <caret line="248" column="0" lean-forward="false" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
           <folding>
-            <element signature="e#5430#5437#1" expanded="true" />
+            <element signature="e#5567#5574#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -626,28 +618,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4220">
-          <caret line="211" column="1" lean-forward="false" selection-start-line="211" selection-start-column="1" selection-end-line="211" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ajax/playlist.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="132" column="0" lean-forward="false" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1900">
-          <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-          <folding>
-            <element signature="e#5430#5437#1" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -658,51 +632,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/script/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="22" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/script/ajax_request.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4620">
-          <caret line="231" column="0" lean-forward="false" selection-start-line="231" selection-start-column="0" selection-end-line="231" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/playlist.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2780">
-          <caret line="139" column="23" lean-forward="false" selection-start-line="139" selection-start-column="23" selection-end-line="139" selection-end-column="23" />
-          <folding>
-            <marker date="1524163453634" expanded="true" signature="951:1005" ph="SELECT id,na... playlists" />
-            <marker date="1524163453634" expanded="true" signature="1423:1544" ph="UPDATE playlists... " />
-            <marker date="1524163453634" expanded="true" signature="1655:1689" ph="DELETE FROM playlists... " />
-            <marker date="1524163453634" expanded="true" signature="1940:1981" ph="SELECT id,na... playlists" />
-            <marker date="1524163453634" expanded="true" signature="2558:2627" ph="INSERT INTO playlists... " />
-            <marker date="1524163453634" expanded="true" signature="3089:3132" ph="SELECT id,so... playlists" />
-            <marker date="1524163453634" expanded="true" signature="3705:3751" ph="UPDATE playlists... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa0.459/script/ajax_request.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1620">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -710,6 +643,72 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/log-2018-04-20.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/ajax_request.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1939">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/playlist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-520">
+          <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+          <folding>
+            <marker date="1524229195815" expanded="true" signature="916:970" ph="SELECT id,na... playlists" />
+            <marker date="1524229195815" expanded="true" signature="1469:1590" ph="UPDATE playlists... " />
+            <marker date="1524229195815" expanded="true" signature="1701:1735" ph="DELETE FROM playlists... " />
+            <marker date="1524229195815" expanded="true" signature="1984:2025" ph="SELECT id,na... playlists" />
+            <marker date="1524229195815" expanded="true" signature="2748:2817" ph="INSERT INTO playlists... " />
+            <marker date="1524229195815" expanded="true" signature="3274:3317" ph="SELECT id,so... playlists" />
+            <marker date="1524229195815" expanded="true" signature="3906:3952" ph="UPDATE playlists... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <folding>
+            <element signature="e#5567#5574#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="211" column="1" lean-forward="false" selection-start-line="211" selection-start-column="1" selection-end-line="211" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-260">
+          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
           <folding />
         </state>
       </provider>

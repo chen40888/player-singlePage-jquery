@@ -32,7 +32,7 @@
 			title = element.text(),
 			cover = element.data('cover'),
 			artist = element.data('artist');
-			// console.log(element.length);
+			// log(element.length);
 
 			//Create a New Audio Object
 			audio = new Audio(song);
@@ -90,9 +90,9 @@
 			// $('#play').hide();
 			// $('#pause').show();
 			$(this_elemtnt).hide();
-			console.log(this_elemtnt);
+			log(this_elemtnt);
 			$pause_btn = $(this_elemtnt).closest('.play_and_pause').find('.pause_btn');
-			console.log(this_elemtnt.closest('body'));
+			log(this_elemtnt.closest('body'));
 			$pause_btn.show();
 			$('#main_player').show();
 		}
@@ -132,7 +132,7 @@
 
 		function playlist_song() {
 			audio.pause();
-			// console.log(this);
+			// log(this);
 			initAudio($(this));
 			$('#play').hide();
 			$('#pause').show();
@@ -148,7 +148,7 @@
 		//Time Duration
 		function showDuration(){
 			$(audio).on('timeupdate', update_time);
-			console.log(audio.ended);//parseInt
+			log(audio.ended);//parseInt
 			function update_time (){
 				//Get hours and minutes
 				var s = parseInt(audio.currentTime % 60);

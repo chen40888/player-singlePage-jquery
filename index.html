@@ -22,7 +22,7 @@
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav">
-				<li><a href="#" data-toggle="modal" data-target="#myModal">Add New Playlist <span
+				<li><a href="#" data-toggle="modal" data-type="new" data-target="#myModal">Add New Playlist <span
 						class="glyphicon glyphicon-plus"></span></a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
@@ -76,12 +76,12 @@
 </div>
 
 <div id="hook_playlist_template" class="hidden">
-	<div class="col-md-3 col-sm-6 col-xs-12 playlist">
+	<div class="col-md-3 col-sm-6 col-xs-12 playlist" data-playlist_id="0">
 		<h2 class="song_name_header"></h2>
 		<div class="playlist_content">
 			<div class="playlist_btns">
 				<a href="#" class="hook_for_delete" data-toggle="modal" data-target="#del_user" data-del=""><span class="glyphicon glyphicon-trash delete_playlist"></span></a>
-				<a href="#" class="edit_playlist" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-pencil"></span></a>
+				<a href="#" class="edit_playlist" data-toggle="modal" data-type="edit" data-target="#myModal"><span class="glyphicon glyphicon-pencil"></span></a>
 				<a href="#" class="play_and_pause">
 					<span class="glyphicon glyphicon-play click_play"></span>
 					<span class="glyphicon glyphicon-pause pause_btn"></span>
@@ -96,7 +96,8 @@
 
 <!-- Modal -->
 
-<div class="modal fade" id="myModal" data-new="true" role="dialog">
+<div id="myModal" class="modal fade" data-new="true" role="dialog">
+	<input id="hook_action_type" value="new" type="hidden" name="action_type" />
 	<div class="modal-dialog">
 
 		<!-- Modal content-->
@@ -107,7 +108,7 @@
 			</div>
 			<div class="modal-body">
 				<form id="new_playlist" action="#" method="post">
-					<div id="setp_1">
+					<div id="step_1">
 						<label for="playlist_name">Playlist Name :</label>
 						<input class="form-control" type="text" id="playlist_name">
 
@@ -137,7 +138,7 @@
 							<button id="prev_to_playlist_name" class="form-control">Prev</button>
 						</div>
 						<div class="col-xs-6">
-							<button id="save_playlist" class="form-control">Next</button>
+							<button id="hook_save_playlist" class="form-control">Next</button>
 						</div>
 						</div>
 				</form>
