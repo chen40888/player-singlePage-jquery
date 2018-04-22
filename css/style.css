@@ -103,10 +103,10 @@ footer {
 	padding: 25px;
 	background-color: #f2f2f2;
 }
-.playlist p {
-}
+
 .playlist {
 	border-radius: 50%;
+	padding: 0 0 13px;
 }
 h2 span {
 	top: 14px;
@@ -220,19 +220,21 @@ h2 span {
 	position: absolute;
 }
 .main_message {
-	top: 100%;
-	left: 50%;
-	z-index: 2;
-	right: 50%;
-	bottom: 50%;
-	width: 200px;
-	height: 200px;
 	display: none;
-	background: red;
-	position: absolute;
-	transform: translate(-50%, -50%);
 }
 .playlist_image {
 	width: 100%;
 	margin: 8px 0;
+}
+.action .playlist_content ,.action .playlist_btns {
+	opacity: 1;
+	display: block;
+}
+
+.song_name_header {
+	right: 0;
+	bottom: 0;
+	top: -50px;
+	left: -130px;
+	position: absolute;
 }

@@ -14,7 +14,7 @@
 				dataType: 'json'
 			};
 
-		log('url: ' + options.url + ' | is_post: ' + is_post);
+		// log('url: ' + options.url + ' | is_post: ' + is_post);
 		$.ajax(options).always(_on_response);
 
 		function _on_response(response) {

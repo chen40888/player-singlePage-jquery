@@ -18,7 +18,8 @@
 			.on('change', '#volume', change_vol)
 			.on('click', '#prev', prev_song);
 
-		var audio;
+		var audio,
+			$playlist_id;
 
 		//Hide Pause Initially
 		$('#pause').hide();
@@ -56,9 +57,16 @@
 			e.preventDefault();
 		}
 
-		function play_music(event_object) {
+		function play_music() {
+			$('#hook_playlist').find('.action').removeClass('action');
+
+			var $this_playlist = $(this).closest('[data-playlist_id]');
+			$this_playlist.addClass('action');
+			$playlist_id = $(this).closest('[data-playlist_id]').data('playlist_id');
+			$('#audio_player').attr('data-playlist_id', $playlist_id);
+			console.log($playlist_id);
 			if(audio) pause_music(); // הגנה מפני השמעה של כמה שירים במקביל
-			show_pause_btn_after_click_on_play($(this));
+			show_pause_btn_after_click_on_play($(this), $playlist_id);
 
 			$playlist_wraper = $(this).closest('.playlist');
 			$list_songs = $playlist_wraper.find('ul').html();
@@ -84,17 +92,19 @@
 			$play_btn = $(this_elemtnt).closest('.play_and_pause').find('.click_play');
 			$play_btn.show();
 		}
-		function show_pause_btn_after_click_on_play(this_elemtnt) {
+		function show_pause_btn_after_click_on_play(this_elemtnt, $playlist_id) {
+			var id = $('#id_' +$playlist_id);
 			$('.pause_btn, #play').hide();
 			$('.click_play, #pause').show();
-			// $('#play').hide();
-			// $('#pause').show();
+
 			$(this_elemtnt).hide();
-			log(this_elemtnt);
 			$pause_btn = $(this_elemtnt).closest('.play_and_pause').find('.pause_btn');
-			log(this_elemtnt.closest('body'));
 			$pause_btn.show();
 			$('#main_player').show();
+
+			id.find('.pause_btn').show();
+			id.find('.click_play').hide();
+
 		}
 
 		function stop_music() {
@@ -103,9 +113,8 @@
 			$('#pause, .pause_btn, #main_player').hide();
 			$('#play').show();
 			$('#duration').fadeOut(400);
-			// $('#main_player').hide();
-			// $('.pause_btn').hide();
 			$('.click_play').show();
+			$('#audio_player').removeAttr('data-playlist_id')
 		}
 
 		function next_song() {
@@ -148,7 +157,7 @@
 		//Time Duration
 		function showDuration(){
 			$(audio).on('timeupdate', update_time);
-			log(audio.ended);//parseInt
+			// log(audio.ended);//parseInt
 			function update_time (){
 				//Get hours and minutes
 				var s = parseInt(audio.currentTime % 60);

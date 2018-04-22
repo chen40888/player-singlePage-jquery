@@ -10,7 +10,11 @@
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div id="message" class="main_message"></div>
+<!--<div id="message" class="main_message"></div>-->
+<div id="message" class="alert alert-success main_message">
+	<strong>Success!</strong> Playlist delete
+</div>
+
 <nav class="navbar fix">
 	<div class="container-fluid">
 		<div class="navbar-header">
@@ -39,13 +43,13 @@
 <div class="container-fluid bg-3 text-center">
 	<div class="row">
 
-		<h3>Play lists</h3><br>
+		<h3 class="check" id="check">Play lists</h3><br>
 		<div id="main_player" class="player_container col-xs-12 col-centered">
 
 			<div id="audio_image" class="col-sm-6 col-xs-12">
 				<img class="cover"/>
 			</div>
-			<div id="audio_player" class="col-sm-6 col-xs-12">
+			<div id="audio_player" data-playlist_id="" class="col-sm-6 col-xs-12">
 				<div class="info">
 					<span class="artist"></span> - <span class="song_title"></span>
 				</div>
@@ -130,6 +134,26 @@
 								<input class="form-control name_for_song" type="text">
 							</div>
 							</div>
+							<div class="url_song_input">
+								<div class="col-xs-6">
+									<label>Song Url :</label>
+									<input class="form-control url_for_song" type="text">
+								</div>
+								<div class="col-xs-6">
+									<label>Song Name :</label>
+									<input class="form-control name_for_song" type="text">
+								</div>
+							</div>
+							<div class="url_song_input">
+								<div class="col-xs-6">
+									<label>Song Url :</label>
+									<input class="form-control url_for_song" type="text">
+								</div>
+								<div class="col-xs-6">
+									<label>Song Name :</label>
+									<input class="form-control name_for_song" type="text">
+								</div>
+							</div>
 						</div>
 						<button id="add_song" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span> More Song</button>
 						<div class="clearfix"></div>
@@ -185,9 +209,5 @@
 <script src="script/main.js" type="text/javascript"></script>
 <script src="script/datastore.js" type="text/javascript"></script>
 <script src="script/ajax_request.js" type="text/javascript"></script>
-<script>
-	// var demo5 = new CircleType(document.getElementsByClassName('check')).radius(100);
-	// $(demo5.element).fitText();
-</script>
 </body>
 </html>

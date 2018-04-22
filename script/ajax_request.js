@@ -33,7 +33,7 @@
 		return false;
 
 		function _on_update() {
-			log(request.songs);
+			// log(request.songs);
 
 			window.App.send('songs&id=' + $doc.data('playlist_id'), true, request, _on_post_playlist_success);
 		}
@@ -66,10 +66,29 @@
 	}
 
 	function _reset_submit_form() {
+		var i = 0;
 		$('#new_playlist')[0].reset();
 		$('#myModal').modal('hide');
 		$('#step_1').removeClass();
 		$('#step_2').addClass('hide');
+		$songs_inputs = $('.url_song_input');
+
+		// console.log($song_lengthurl_song_input);
+
+		// for (i = 0; i < $songs_inputs.length; i++) {
+			// songs_input = $songs_inputs[i];
+			// console.log(songs_input);
+			// alert();
+			// $name = songs_input.find('.name_for_song');
+			// $url = songs_input.find('.url_for_song');
+			// alert();
+			// console.log($name);
+		// && $url.hasClass('problem')
+		// 	if($name.hasClass('problem')) {
+		// 		alert();
+		// 		// $songs_inputs[i].removeClass('problem');
+		// 	}
+		// }
 	}
 
 	function _delete_from_db() {
@@ -83,7 +102,7 @@
 				$('#message').hide();
 			}, 4000);
 
-			log(response);
+			// log(response);
 		}
 
 	}
@@ -122,7 +141,7 @@
 			$clone = $($('#hook_playlist_template').html()),
 			song_name, song_url;
 
-		log(playlist_object);
+		// log(playlist_object);
 		if(!isset($songs_array, 'length')) return;
 
 		for(index; index < $songs_array.length; index++) {
@@ -135,9 +154,12 @@
 			.attr('data-playlist_id', playlist_id)
 			.attr('id', 'id_' + playlist_id)
 			.find('.song_name_header').html(playlist_name).end()
-			.find('.playlist_btns a').data('del', playlist_id).data('name', playlist_name);
+			.find('.playlist_btns a').data('del', playlist_id).data('name', playlist_name).end().find('h2').attr('id', 'header_title_' + playlist_id);
 
 		$('#hook_playlist').append($clone);
+		new CircleType(document.getElementById('header_title_' + playlist_id)).radius(120);
+
+
 	}
 
 })(window);
