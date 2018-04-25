@@ -13,6 +13,8 @@
 	$(_on_dom_ready);
 
 	function _update_or_create_playlist() {
+		// window.App.validation();
+
 		var songs_array = [],
 			playlist_name = $('#playlist_name').val(),
 			playlist_url_image = $('#playlist_url').val(),
@@ -30,6 +32,8 @@
 		else _on_create();
 
 		_reset_submit_form();
+
+
 		return false;
 
 		function _on_update() {
@@ -71,13 +75,19 @@
 		$('#myModal').modal('hide');
 		$('#step_1').removeClass();
 		$('#step_2').addClass('hide');
-		$songs_inputs = $('.url_song_input');
+		// $songs_inputs = $('#songs_urls').find('.url_song_input').find('input');
+		// console.log($songs_inputs);
 
-		// console.log($song_lengthurl_song_input);
-
-		// for (i = 0; i < $songs_inputs.length; i++) {
-			// songs_input = $songs_inputs[i];
-			// console.log(songs_input);
+		// for (i = 0; i < $url.length; i++) {
+		// 	$url_song = $url[i];
+		// 	$url_song.removeClass('problem')
+			// if() {
+			// 	alert();
+			// 	console.log($url_song);
+			//
+			//
+			// }
+			// console.log(songs_input.find('.url_for_song'));
 			// alert();
 			// $name = songs_input.find('.name_for_song');
 			// $url = songs_input.find('.url_for_song');

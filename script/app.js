@@ -5,6 +5,8 @@
 	window.App = {};
 	window.App.send = send;
 	window.App.delete_playlist = delete_playlist;
+	// window.App.validation = validation;
+	validation();
 
 	function send(type, is_post, request, callback) {
 		var options = {
@@ -35,6 +37,15 @@
 		function _on_response(response) {
 			if(callback) callback(response);
 		}
+	}
+
+	function validation() {
+		$("#new_playlist").validate();
+
+		$.validator.setDefaults({
+			debug: true,
+			success: "valid"
+		});
 	}
 
 })(window);

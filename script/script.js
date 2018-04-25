@@ -18,8 +18,7 @@
 			.on('change', '#volume', change_vol)
 			.on('click', '#prev', prev_song);
 
-		var audio,
-			$playlist_id;
+		var audio, $playlist_id;
 
 		//Hide Pause Initially
 		$('#pause').hide();
@@ -64,7 +63,7 @@
 			$this_playlist.addClass('action');
 			$playlist_id = $(this).closest('[data-playlist_id]').data('playlist_id');
 			$('#audio_player').attr('data-playlist_id', $playlist_id);
-			console.log($playlist_id);
+			// console.log($playlist_id);
 			if(audio) pause_music(); // הגנה מפני השמעה של כמה שירים במקביל
 			show_pause_btn_after_click_on_play($(this), $playlist_id);
 
