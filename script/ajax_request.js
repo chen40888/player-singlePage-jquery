@@ -8,9 +8,30 @@
 	$doc
 		.on('click', '#hook_save_playlist', _update_or_create_playlist)
 		.on('click', '#preview', _show_image)
+		.on('keyup', '#search_music', _search_playlist_name)
 		.on('click', '#delete_this_playlist', _delete_from_db);
 
 	$(_on_dom_ready);
+
+	function _search_playlist_name() {
+		window.App.send('playlist', false, {}, _on_get_all_playlist_for_search);
+
+		function _on_get_all_playlist_for_search(all_playlists_objects) {
+			var $search_this = $('#search_music').val(),
+				playlist_data = all_playlists_objects.data;
+			$('#hook_playlist').html('');
+
+			searchStringInArray($search_this, playlist_data);
+
+			function searchStringInArray(str, array_object) {
+				for(var j = 0; j < array_object.length; j++) {
+					var id = array_object[j].id;
+					if(array_object[j].name.match(str)) _create_playlist(id, playlist_data[j]);
+				}
+				return -1;
+			}
+		}
+	}
 
 	function _update_or_create_playlist() {
 		// window.App.validation();
@@ -33,12 +54,9 @@
 
 		_reset_submit_form();
 
-
 		return false;
 
 		function _on_update() {
-			// log(request.songs);
-
 			window.App.send('songs&id=' + $doc.data('playlist_id'), true, request, _on_post_playlist_success);
 		}
 
@@ -70,35 +88,14 @@
 	}
 
 	function _reset_submit_form() {
-		var i = 0;
 		$('#new_playlist')[0].reset();
 		$('#myModal').modal('hide');
 		$('#step_1').removeClass();
 		$('#step_2').addClass('hide');
-		// $songs_inputs = $('#songs_urls').find('.url_song_input').find('input');
-		// console.log($songs_inputs);
 
-		// for (i = 0; i < $url.length; i++) {
-		// 	$url_song = $url[i];
-		// 	$url_song.removeClass('problem')
-			// if() {
-			// 	alert();
-			// 	console.log($url_song);
-			//
-			//
-			// }
-			// console.log(songs_input.find('.url_for_song'));
-			// alert();
-			// $name = songs_input.find('.name_for_song');
-			// $url = songs_input.find('.url_for_song');
-			// alert();
-			// console.log($name);
-		// && $url.hasClass('problem')
-		// 	if($name.hasClass('problem')) {
-		// 		alert();
-		// 		// $songs_inputs[i].removeClass('problem');
-		// 	}
-		// }
+		var $new_input = '<div class="url_song_input"><div class="col-xs-6"><label>Song Url :</label><input class="form-control url_for_song" type="text"></div><div class="col-xs-6"><label>Song Name :</label><input class="form-control name_for_song" type="text"></div></div>';
+
+		$('#songs_urls').html($new_input + $new_input + $new_input);
 	}
 
 	function _delete_from_db() {
@@ -151,7 +148,8 @@
 			$clone = $($('#hook_playlist_template').html()),
 			song_name, song_url;
 
-		// log(playlist_object);
+		// console.log(playlist_id);
+		// console.log(playlist_object);
 		if(!isset($songs_array, 'length')) return;
 
 		for(index; index < $songs_array.length; index++) {
@@ -166,9 +164,9 @@
 			.find('.song_name_header').html(playlist_name).end()
 			.find('.playlist_btns a').data('del', playlist_id).data('name', playlist_name).end().find('h2').attr('id', 'header_title_' + playlist_id);
 
+		// console.log($clone);
 		$('#hook_playlist').append($clone);
 		new CircleType(document.getElementById('header_title_' + playlist_id)).radius(120);
-
 
 	}
 
