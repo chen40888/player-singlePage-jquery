@@ -88,6 +88,8 @@ input#volume::-webkit-slider-thumb {
 .progress {
 	height: 10px;
 	display: inline-block;
+	position: absolute;
+	left: 0;
 	background: url(../images/progress.png) no-repeat;
 }
 #duration {
@@ -217,6 +219,9 @@ h2 span {
 	color: black;
 }
 
+.action .playlist_content {
+/*transition: ;*/
+}
 
 @media only screen and (max-width: 600px) {
 	.player_container {

@@ -18,6 +18,9 @@
 			.on('change', '#volume', change_vol)
 			.on('click', '#prev', prev_song);
 
+	$('#song_image').on('error', imgError);
+
+
 		var audio, $playlist_id;
 
 		//Hide Pause Initially
@@ -52,6 +55,7 @@
 			element.addClass('active');
 		}
 
+
 		function _prevent_default(e) {
 			e.preventDefault();
 		}
@@ -63,8 +67,8 @@
 			$this_playlist.addClass('action');
 			$playlist_id = $(this).closest('[data-playlist_id]').data('playlist_id');
 			$('#audio_player').attr('data-playlist_id', $playlist_id);
-			// console.log($playlist_id);
 			if(audio) pause_music(); // הגנה מפני השמעה של כמה שירים במקביל
+
 			show_pause_btn_after_click_on_play($(this), $playlist_id);
 
 			$playlist_wraper = $(this).closest('.playlist');
@@ -74,6 +78,8 @@
 			initAudio($('#playlist').find('li:first-child'));
 			audio.play();
 
+			audio.addEventListener('ended',next_song); // when this song over play its load the next song
+
 			$('#duration').fadeIn(400);
 			showDuration();
 		}
@@ -82,22 +88,20 @@
 			audio.pause();
 			show_play_btn_after_click_on_pause($(this));
 		}
-		function show_play_btn_after_click_on_pause(this_elemtnt) {
+		function show_play_btn_after_click_on_pause(this_element) {
 			$('.pause_btn, #pause').hide();
-			$('.click_play').show();
-			// $('#pause').hide();
-			$('#play').show();
-			$(this_elemtnt).hide();
-			$play_btn = $(this_elemtnt).closest('.play_and_pause').find('.click_play');
+			$('.click_play, #play').show();
+			$(this_element).hide();
+			$play_btn = $(this_element).closest('.play_and_pause').find('.click_play');
 			$play_btn.show();
 		}
-		function show_pause_btn_after_click_on_play(this_elemtnt, $playlist_id) {
+		function show_pause_btn_after_click_on_play(this_element, $playlist_id) {
 			var id = $('#id_' +$playlist_id);
 			$('.pause_btn, #play').hide();
 			$('.click_play, #pause').show();
 
-			$(this_elemtnt).hide();
-			$pause_btn = $(this_elemtnt).closest('.play_and_pause').find('.pause_btn');
+			$(this_element).hide();
+			$pause_btn = $(this_element).closest('.play_and_pause').find('.pause_btn');
 			$pause_btn.show();
 			$('#main_player').show();
 
@@ -109,11 +113,14 @@
 		function stop_music() {
 			audio.pause();
 			audio.currentTime = 0;
+			var $audio_player = $('#audio_player');
+			$('#hook_playlist').find('.action').removeClass('action');
 			$('#pause, .pause_btn, #main_player').hide();
 			$('#play').show();
 			$('#duration').fadeOut(400);
 			$('.click_play').show();
-			$('#audio_player').removeAttr('data-playlist_id')
+			$audio_player.removeAttr('data-playlist_id');
+
 		}
 
 		function next_song() {
@@ -130,7 +137,7 @@
 		function prev_song() {
 			audio.pause();
 			var prev = $('#playlist').find('li.active').prev();
-			if (prev.length == 0) {
+			if (prev.length === 0) {
 				prev = $('#playlist').find('li:last-child');
 			}
 			initAudio(prev);
@@ -172,6 +179,11 @@
 				}
 				$('.progress').css('width',value+'%');
 			}
+		}
+
+		function imgError() {
+			$('#song_image').attr('src', '../images/noimage.jpg');
+			return true;
 		}
 	}
 

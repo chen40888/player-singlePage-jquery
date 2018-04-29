@@ -108,10 +108,7 @@
 			setTimeout(function() {
 				$('#message').hide();
 			}, 4000);
-
-			// log(response);
 		}
-
 	}
 
 	function _show_image(e) {
