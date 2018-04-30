@@ -64,10 +64,22 @@
 			$('#hook_playlist').find('.action').removeClass('action');
 
 			var $this_playlist = $(this).closest('[data-playlist_id]');
-			$this_playlist.addClass('action');
 			$playlist_id = $(this).closest('[data-playlist_id]').data('playlist_id');
+
 			$('#audio_player').attr('data-playlist_id', $playlist_id);
+
+
+			var is_on_play = $('#audio_player').attr('data-playlist_id');
+			console.log(is_on_play);
+			if(is_on_play) {
+				$('#hook_playlist').find('.action').removeClass('action');
+				$('#id_' + is_on_play).addClass('action')
+			}
+
+			$this_playlist.addClass('action');
 			if(audio) pause_music(); // הגנה מפני השמעה של כמה שירים במקביל
+
+
 
 			show_pause_btn_after_click_on_play($(this), $playlist_id);
 

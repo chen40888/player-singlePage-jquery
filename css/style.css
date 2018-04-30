@@ -65,7 +65,6 @@ input#volume::-webkit-slider-thumb {
 	height: 104px;
 	overflow: scroll;
 	overflow-x: hidden;
-	/*list-style-type: none;*/
 }
 #playlist li {
 	margin: 5px;
@@ -92,12 +91,12 @@ input#volume::-webkit-slider-thumb {
 	left: 0;
 	background: url(../images/progress.png) no-repeat;
 }
-#duration {
-	float: right;
-	background: #000;
-	padding: 4px 8px;
-	border-radius: 5px;
-}
+/*#duration {*/
+	/*float: right;*/
+	/*background: #000;*/
+	/*padding: 4px 8px;*/
+	/*border-radius: 5px;*/
+/*}*/
 .navbar {
 	margin-bottom: 0;
 	border-radius: 0;
@@ -130,7 +129,7 @@ h2 span {
 	height: 168px;
 	opacity: 0.7;
 	position: relative;
-	background: url(../images/broken.png) no-repeat scroll -20px;
+	background: url(../images/broke.png) no-repeat scroll -20px;
 }
 .playlist_content:hover {
 	opacity: 1;
@@ -173,7 +172,7 @@ h2 span {
 	margin: 0 auto;
 }
 .main_playlists {
-	padding: 30px 0 0;
+	padding: 78px 0 0;
 }
 .modal {
 	color: black;
@@ -220,8 +219,24 @@ h2 span {
 }
 
 .action .playlist_content {
-/*transition: ;*/
+	-ms-transform: rotate(20deg); /* IE 9 */
+	-webkit-transform: rotate(20deg); /* Safari */
+	transform: rotate(20deg); /* Standard syntax */
 }
+.action .playlist_content .playlist_btns{
+	-ms-transform: rotate(-20deg); /* IE 9 */
+	-webkit-transform: rotate(-20deg); /* Safari */
+	transform: rotate(-20deg);
+	left: 75px;
+	top: 11px;
+}
+.action .song_name_header {
+	top: -93px;
+	left: -177px;
+}
+
+
+
 
 @media only screen and (max-width: 600px) {
 	.player_container {
