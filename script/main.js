@@ -63,7 +63,7 @@
 				};
 
 			_toggle_step();
-			log('id_to_update: ' + id_to_update);
+			// log('id_to_update: ' + id_to_update);
 			if(($('#hook_action_type').val() === 'edit')) _on_edit_do_update();
 
 			return false;
@@ -118,12 +118,10 @@
 
 		function problem($this_input) {
 			$this_input.addClass(' problem');
-			return false
 		}
 
 		function valid($this_input) {
 			$this_input.removeClass(' problem');
-			return true
 		}
 
 		function regexp_for_mp3() {

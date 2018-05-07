@@ -49,6 +49,13 @@
 			songs: songs_array
 		};
 
+		//valid come here
+		var $is_valid = window.App.valid(request);
+		console.log($is_valid);
+		if(!$is_valid) {
+			return false;
+		}
+
 		if($('#hook_action_type').val() === 'edit') _on_update();
 		else _on_create();
 
@@ -61,6 +68,7 @@
 		}
 
 		function _on_create() {
+			console.log(request);
 			window.App.send('playlist', true, request, _on_post_playlist_success);
 		}
 
@@ -77,6 +85,7 @@
 		}
 
 		function _on_post_playlist_success(response) {
+			console.log(response);
 			var playlist_id = (isset(response, 'data.id') ? response.data.id : 0);
 
 			if(playlist_id) window.App.send('playlist&id=' + playlist_id, false, {}, _on_get_playlist_callback);

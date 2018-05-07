@@ -15,14 +15,14 @@ body {
 	clear: both;
 }
 .player_container {
-	width: 70%;
+	width: 60%;
 	overflow: auto;
 	background: #333;
 	margin: 60px auto;
-	border-radius: 10px;
+	border-radius: 120px;
 	border: #666 solid 2px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
+	-moz-border-radius: 120px;
+	-webkit-border-radius: 120px;
 }
 #audio_image {
 	float: left;
@@ -39,7 +39,9 @@ body {
 }
 .cover {
 	z-index: 1;
-	width: 100%;
+	width: 80%;
+	padding: 8px 0 0;
+	border-radius: 159px;
 }
 input#volume {
 	width: 100%;
@@ -112,15 +114,6 @@ footer {
 }
 h3 {
 	color: black;
-}
-h2 span {
-	top: 14px;
-	left: 130px;
-	width: 20px;
-	height: 125px;
-	position: absolute;
-	font: 26px Monaco, MonoSpace;
-	transform-origin: bottom center;
 }
 .playlist img {
 	width: 80%;
@@ -234,7 +227,9 @@ h2 span {
 	top: -93px;
 	left: -177px;
 }
-
+.wrapper_player {
+	position: relative;
+}
 
 
 
@@ -248,5 +243,8 @@ h2 span {
 	}
 	.playlist {
 		margin: 0 30px 0;
+	}
+	.cover {
+		margin: 55px 0 0;
 	}
 }

@@ -144,6 +144,7 @@
 			initAudio(next);
 			audio.play();
 			showDuration();
+			audio.addEventListener('ended',next_song);
 		}
 
 		function prev_song() {
