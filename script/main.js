@@ -70,12 +70,15 @@
 
 			function _on_edit_do_update() {
 				window.App.send('playlist&id=' + id_to_update, true, playlist_object, _on_update_name_and_image);
+				_after_update_name_and_image_seccess(id_to_update, playlist_object);
 			}
 
 			function _on_update_name_and_image() {
 				$('#id_' + id_to_update)
 					.find('li').attr('data-cover', playlist_url_image).end()
-					.find('.song_name_header').html(playlist_name)
+					.find('.song_name_header').html(playlist_name);
+				new CircleType(document.getElementById('header_title_' + id_to_update)).radius(120);
+
 			}
 
 			function _toggle_step() {
@@ -83,6 +86,14 @@
 				$('#step_2').removeClass('hide');
 			}
 		}
+		function _after_update_name_and_image_seccess(id, playlist_object) {
+			$('#id_' + id).find('li').each(_change_image);
+
+			function _change_image() {
+				$(this).attr('data-cover', playlist_object.image);
+			}
+		}
+
 
 		function _add_song_to_edit($song_url, $song_name) {
 			var $new_input ='<div class="url_song_input"><div class="col-xs-6"><label>Song Url :</label><input class="form-control url_for_song" value="' + $song_url + '" type="text"></div><div class="col-xs-6"><label>Song Name :</label><input class="form-control name_for_song" type="text" value="' + $song_name + '"></div></div>';

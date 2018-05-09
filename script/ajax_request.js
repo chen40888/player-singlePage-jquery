@@ -64,11 +64,29 @@
 		return false;
 
 		function _on_update() {
+
 			window.App.send('songs&id=' + $doc.data('playlist_id'), true, request, _on_post_playlist_success);
+			after_update_seccess($doc.data('playlist_id'),request.songs);
+		}
+
+		function after_update_seccess(id, songs) {
+			var i = 0;
+			$('#id_' + id).find('li').each(_update_songs);
+
+			function _update_songs() {
+				var song = songs[i];
+				$(this).attr('data-song', song.url);
+				$(this).html(song.name);
+				i++
+			}
+
+			if($('#audio_player').data('playlist_id') == id) {
+				var update_songs = $('#id_' + id).find('ul').html();
+				$('#playlist').html(update_songs);
+			}
 		}
 
 		function _on_create() {
-			console.log(request);
 			window.App.send('playlist', true, request, _on_post_playlist_success);
 		}
 
@@ -85,7 +103,6 @@
 		}
 
 		function _on_post_playlist_success(response) {
-			console.log(response);
 			var playlist_id = (isset(response, 'data.id') ? response.data.id : 0);
 
 			if(playlist_id) window.App.send('playlist&id=' + playlist_id, false, {}, _on_get_playlist_callback);

@@ -62,6 +62,7 @@
 
 		function play_music() {
 			$('#hook_playlist').find('.action').removeClass('action');
+			$('.wrapper_player').attr('data-open', 'true');
 
 			var $this_playlist = $(this).closest('[data-playlist_id]');
 			$playlist_id = $(this).closest('[data-playlist_id]').data('playlist_id');
@@ -92,6 +93,7 @@
 
 			audio.addEventListener('ended',next_song); // when this song over play its load the next song
 
+			$('#hook_for_delete_in_playlist').attr('data-del', $playlist_id);
 			$('#duration').fadeIn(400);
 			showDuration();
 		}
@@ -132,7 +134,7 @@
 			$('#duration').fadeOut(400);
 			$('.click_play').show();
 			$audio_player.removeAttr('data-playlist_id');
-
+			$('.wrapper_player').attr('data-open', 'false');
 		}
 
 		function next_song() {
