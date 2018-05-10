@@ -133,7 +133,6 @@ h3 {
 .playlist_btns {
 	top: 7px;
 	left: 96px;
-	display: none;
 	position: absolute;
 }
 .playlist_content:hover .playlist_btns {
@@ -235,6 +234,13 @@ h2 span {
 	z-index: 2;
 	position: absolute;
 }
+
+.player_container .hook_for_delete {
+	margin: 0 0 0 25px;
+}
+
+
+
 
 
 @media only screen and (max-width: 600px) {

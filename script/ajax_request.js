@@ -51,7 +51,7 @@
 
 		//valid come here
 		var $is_valid = window.App.valid(request);
-		console.log($is_valid);
+		// console.log($is_valid);
 		if(!$is_valid) {
 			return false;
 		}
@@ -128,6 +128,7 @@
 		$id_to_delete = $(this).attr('data-delete');
 		window.App.delete_playlist($id_to_delete, _on_delete_playlist_success);
 		$('#id_' + $id_to_delete).remove();
+		$('#main_player').hide();
 
 		function _on_delete_playlist_success(response) {
 			$('#message').show();
@@ -171,8 +172,6 @@
 			$clone = $($('#hook_playlist_template').html()),
 			song_name, song_url;
 
-		// console.log(playlist_id);
-		// console.log(playlist_object);
 		if(!isset($songs_array, 'length')) return;
 
 		for(index; index < $songs_array.length; index++) {
@@ -185,7 +184,7 @@
 			.attr('data-playlist_id', playlist_id)
 			.attr('id', 'id_' + playlist_id)
 			.find('.song_name_header').html(playlist_name).end()
-			.find('.playlist_btns a').data('del', playlist_id).data('name', playlist_name).end().find('h2').attr('id', 'header_title_' + playlist_id);
+			.find('.playlist_btns a').data('del', playlist_id).data('name', playlist_name).end().find('h2').attr('id', 'header_title_' + playlist_id).attr('data-name', playlist_name);
 
 		// console.log($clone);
 		$('#hook_playlist').append($clone);
