@@ -26,7 +26,7 @@
 		//Hide Pause Initially
 		$('#pause').hide();
 		$('.pause_btn').hide();
-		$('#main_player').hide();
+		$('#wrapper_player').hide();
 
 
 		function initAudio(element){
@@ -117,7 +117,7 @@
 			$(this_element).hide();
 			$pause_btn = $(this_element).closest('.play_and_pause').find('.pause_btn');
 			$pause_btn.show();
-			$('#main_player').show();
+			$('#wrapper_player').show();
 
 			id.find('.pause_btn').show();
 			id.find('.click_play').hide();
@@ -129,7 +129,7 @@
 			audio.currentTime = 0;
 			var $audio_player = $('#audio_player');
 			$('#hook_playlist').find('.action').removeClass('action');
-			$('#pause, .pause_btn, #main_player').hide();
+			$('#pause, .pause_btn, #wrapper_player').hide();
 			$('#play').show();
 			$('#duration').fadeOut(400);
 			$('.click_play').show();

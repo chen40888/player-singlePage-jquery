@@ -110,7 +110,7 @@ footer {
 
 .playlist {
 	border-radius: 50%;
-	padding: 0 0 13px;
+	margin: 13px 0 93px;
 }
 h3 {
 	color: black;
@@ -133,6 +133,7 @@ h3 {
 .playlist_btns {
 	top: 7px;
 	left: 96px;
+	display: none;
 	position: absolute;
 }
 .playlist_content:hover .playlist_btns {
@@ -210,20 +211,23 @@ h2 span {
 }
 
 .action .playlist_content {
+	transform: rotate(20deg); /* Standard syntax */
 	-ms-transform: rotate(20deg); /* IE 9 */
 	-webkit-transform: rotate(20deg); /* Safari */
-	transform: rotate(20deg); /* Standard syntax */
 }
 .action .playlist_content .playlist_btns{
+	top: 11px;
+	left: 75px;
+	transform: rotate(-20deg);
 	-ms-transform: rotate(-20deg); /* IE 9 */
 	-webkit-transform: rotate(-20deg); /* Safari */
-	transform: rotate(-20deg);
-	left: 75px;
-	top: 11px;
 }
 .action .song_name_header {
-	top: -93px;
-	left: -177px;
+	top: -54px;
+	left: 70px;
+	transform: rotate(-20deg);
+	-ms-transform: rotate(-20deg); /* IE 9 */
+	-webkit-transform: rotate(-20deg); /* Safari */
 }
 .wrapper_player {
 	position: relative;
