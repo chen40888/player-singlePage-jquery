@@ -200,10 +200,8 @@ h2 span {
 }
 
 .song_name_header {
-	right: 0;
-	bottom: 0;
-	top: -57px;
-	left: -168px;
+	top: -63px;
+	left: 106px;
 	color: black;
 	position: absolute;
 }
@@ -239,17 +237,9 @@ h2 span {
 	margin: 0 0 0 25px;
 }
 
-
-
-
-
 @media only screen and (max-width: 600px) {
 	.player_container {
 		width: 90%;
-	}
-	.song_name_header {
-		top: -60px;
-		left: -81px;
 	}
 	.playlist {
 		margin: 0 30px 0;
