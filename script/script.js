@@ -45,7 +45,7 @@
 			}
 
 			$('#audio_player')
-				.find('.song_title').text(title).end()
+				.find('.song_title').text('song on action: ' + title).end()
 				.find('.artist').text(artist);
 
 			//Insert Cover Image
@@ -95,6 +95,7 @@
 
 			$('#hook_for_delete_in_playlist').attr('data-del', $playlist_id).attr('data-name', $('#id_' + is_on_play).find('.song_name_header').data('name'));
 			$('#duration').fadeIn(400);
+			// $('#main_player').show();
 			showDuration();
 		}
 
@@ -118,6 +119,7 @@
 			$pause_btn = $(this_element).closest('.play_and_pause').find('.pause_btn');
 			$pause_btn.show();
 			$('#wrapper_player').show();
+			$('#main_player').show();
 
 			id.find('.pause_btn').show();
 			id.find('.click_play').hide();

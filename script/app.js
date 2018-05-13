@@ -21,6 +21,7 @@
 		$.ajax(options).always(_on_response);
 
 		function _on_response(response) {
+			// console.log(response);
 			if(callback) callback(response);
 		}
 	}
@@ -41,7 +42,7 @@
 	}
 
 	function valid(object) {
-		console.log(object);
+		// console.log(object);
 		var name = object['name'],
 			image = object['image'],
 			songs_array = object['songs'];

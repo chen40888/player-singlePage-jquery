@@ -235,12 +235,27 @@ h2 span {
 .wrapper_player .playlist_btns a {
 	z-index: 2;
 	position: absolute;
+	font-size: 20px;
+	color: black;
+	background: aquamarine;
+	width: 32px;
+	height: 24px;
+	border-radius: 14px;
 }
 
 .player_container .hook_for_delete {
 	margin: 0 0 0 25px;
 }
-
+.wrapper_player .playlist_btns {
+	left: 50%;
+	top: -27px;
+	right: 50%;
+	display: block;
+	position: absolute;
+}
+.wrapper_player .hook_for_delete {
+	right: 5px;
+}
 @media only screen and (max-width: 600px) {
 	.player_container {
 		width: 90%;

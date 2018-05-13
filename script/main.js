@@ -9,14 +9,23 @@
 			.on('click', '#btn_step_1', _on_clicked_first_next_step_update_or_move)
 			.on('click', '#prev_to_playlist_name', prev_to_change_playlist_name)
 			.on('click', '.edit_playlist', _on_clicked_edit_get_playlist)
+			.on('click', '.edit_playlist_now_play', _on_clicked_edit_get_playlist_for_player)
 			.on('click', '#add_song', add_more_col)
 			.on('click', '.hook_for_delete', delete_this_playlist)
 			.on('blur', '.url_for_song', regexp_for_mp3)
 			.on('blur', '.name_for_song', regexp_for_name)
 			.on('click', '[data-target="#myModal"]', _on_clicked_to_open_modal);
 
+
 		function _on_clicked_to_open_modal() {
 			$('#hook_action_type').val($(this).data('type'));
+		}
+
+		function _on_clicked_edit_get_playlist_for_player() {
+
+			var	$id = $('#audio_player').data('playlist_id');
+			window.App.send('playlist&id=' + $id, false, {}, _on_success_update_modal_with_playlist_data);
+
 		}
 
 		function _on_clicked_edit_get_playlist() {
@@ -25,6 +34,8 @@
 
 			id_to_update = id_to_update.split('_')[1];
 			$doc.data('playlist_id', id_to_update);
+			// $('#audio_player').attr('data-playlist_id', id_to_update);
+			// log($doc);
 			window.App.send('playlist&id=' + id_to_update, false, {}, _on_success_update_modal_with_playlist_data);
 		}
 
@@ -54,7 +65,11 @@
 		}
 
 		function _on_clicked_first_next_step_update_or_move() {
-			var id_to_update = $doc.data('playlist_id'),
+			// console.log('wach here');
+			// console.log($doc);
+			var
+				// id_to_update = $('#audio_player').data('playlist_id'),
+				id_to_update = $doc.data('playlist_id'),
 				playlist_name = $('#playlist_name').val(),
 				playlist_url_image = $('#playlist_url').val(),
 				playlist_object = {
@@ -77,7 +92,7 @@
 				$('#id_' + id_to_update)
 					.find('li').attr('data-cover', playlist_url_image).end()
 					.find('.song_name_header').html(playlist_name);
-				new CircleType(document.getElementById('header_title_' + id_to_update)).radius(120);
+				// new CircleType(document.getElementById('header_title_' + id_to_update)).radius(120);
 
 			}
 

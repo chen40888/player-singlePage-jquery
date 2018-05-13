@@ -9,6 +9,7 @@
 		.on('click', '#hook_save_playlist', _update_or_create_playlist)
 		.on('click', '#preview', _show_image)
 		.on('keyup', '#search_music', _search_playlist_name)
+		.on('click', '#add_new_playlist', _reset_submit_form)
 		.on('click', '#delete_this_playlist', _delete_from_db);
 
 	$(_on_dom_ready);
@@ -60,6 +61,7 @@
 		else _on_create();
 
 		_reset_submit_form();
+		$('#myModal').modal('hide');
 
 		return false;
 
@@ -115,9 +117,9 @@
 
 	function _reset_submit_form() {
 		$('#new_playlist')[0].reset();
-		$('#myModal').modal('hide');
 		$('#step_1').removeClass();
 		$('#step_2').addClass('hide');
+		$('#hook_action_type').val('new');
 
 		var $new_input = '<div class="url_song_input"><div class="col-xs-6"><label>Song Url :</label><input class="form-control url_for_song" type="text"></div><div class="col-xs-6"><label>Song Name :</label><input class="form-control name_for_song" type="text"></div></div>';
 
@@ -135,6 +137,10 @@
 			setTimeout(function() {
 				$('#message').hide();
 			}, 4000);
+
+			if($('#audio_player').data('playlist_id') == $id_to_delete) {
+				$('#wrapper_player').hide();
+			}
 		}
 	}
 
