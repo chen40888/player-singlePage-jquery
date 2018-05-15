@@ -69,12 +69,15 @@
 
 			$('#audio_player').attr('data-playlist_id', $playlist_id);
 
+			//בדיקה
+			$('#hook_for_id').val($playlist_id);
+
 
 			var is_on_play = $('#audio_player').attr('data-playlist_id');
 			console.log(is_on_play);
 			if(is_on_play) {
 				$('#hook_playlist').find('.action').removeClass('action');
-				$('#id_' + is_on_play).addClass('action')
+				$('#id_' + is_on_play).addClass('action');
 			}
 
 			$this_playlist.addClass('action');

@@ -23,8 +23,10 @@
 
 		function _on_clicked_edit_get_playlist_for_player() {
 
-			var	$id = $('#audio_player').data('playlist_id');
-			window.App.send('playlist&id=' + $id, false, {}, _on_success_update_modal_with_playlist_data);
+			var	$id = $('#audio_player').data('playlist_id'),
+			id_to_update = $('#hook_for_id').val();
+			console.log(id_to_update);
+			window.App.send('playlist&id=' + id_to_update, false, {}, _on_success_update_modal_with_playlist_data);
 
 		}
 
@@ -34,6 +36,7 @@
 
 			id_to_update = id_to_update.split('_')[1];
 			$doc.data('playlist_id', id_to_update);
+			$('#hook_for_id').val(id_to_update);
 			// $('#audio_player').attr('data-playlist_id', id_to_update);
 			// log($doc);
 			window.App.send('playlist&id=' + id_to_update, false, {}, _on_success_update_modal_with_playlist_data);
@@ -84,6 +87,9 @@
 			return false;
 
 			function _on_edit_do_update() {
+				// var id_to_update = $('#hook_for_id').val();
+				id_to_update = $('#hook_for_id').val();
+				console.log(id_to_update);
 				window.App.send('playlist&id=' + id_to_update, true, playlist_object, _on_update_name_and_image);
 				_after_update_name_and_image_seccess(id_to_update, playlist_object);
 			}
@@ -92,7 +98,7 @@
 				$('#id_' + id_to_update)
 					.find('li').attr('data-cover', playlist_url_image).end()
 					.find('.song_name_header').html(playlist_name);
-				// new CircleType(document.getElementById('header_title_' + id_to_update)).radius(120);
+				new CircleType(document.getElementById('header_title_' + id_to_update)).radius(120);
 
 			}
 

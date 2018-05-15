@@ -242,7 +242,12 @@ h2 span {
 	height: 24px;
 	border-radius: 14px;
 }
-
+.prob {
+	display: none;
+}
+.not_valid .prob{
+	display: block;
+}
 .player_container .hook_for_delete {
 	margin: 0 0 0 25px;
 }

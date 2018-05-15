@@ -48,8 +48,6 @@
 			songs_array = object['songs'];
 
 		var regexUrl = RegExp(/^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/);
-		// var regexMp3Url = RegExp("^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?.mp3$");
-
 		if(name === '' || image === '') {
 			return false
 		}
@@ -65,18 +63,23 @@
 			var is_mp3 = song_url.search(/.mp3/i);
 			var song_url_mp3valid = regexUrl.test(song_url);
 
-			// var song_url_valid = song_url.match(regexMp3Url);
-			// var song_url_valid = regexMp3Url.test(song_url);
-			// console.log('song_url_valid ' +song_url_valid);
 			console.log('song_url_mp3valid ' +song_url_mp3valid);
 
 
 			if(song_name === '' || song_url === '' || !is_valid_name || is_mp3 === -1 || !song_url_mp3valid) {
+				// console.log($(songs_array[i]).closest('div'));
+				// alert();
+				// problem(songs_array[i]);
+// alert();
+
+				$('#not_valid').show();
 				return false;
 			}
 		}
-		return true;
 
+		// $('#not_valid').removeClass(' not_valid');
+
+		return true;
 	}
 
 	function validation() {
