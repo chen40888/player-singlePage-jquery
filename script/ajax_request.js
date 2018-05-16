@@ -35,7 +35,6 @@
 	}
 
 	function _update_or_create_playlist() {
-		// window.App.validation();
 
 		var songs_array = [],
 			playlist_name = $('#playlist_name').val(),
@@ -68,7 +67,7 @@
 		function _on_update() {
 
 			var id_to_up = $('#hook_for_id').val();
-			console.log(id_to_up);
+			// console.log(id_to_up);
 			window.App.send('songs&id=' + id_to_up, true, request, _on_post_playlist_success);
 			after_update_seccess(id_to_up ,request.songs);
 
