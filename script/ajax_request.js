@@ -125,7 +125,7 @@
 		$('#step_2').addClass('hide');
 		$('#hook_action_type').val('new');
 
-		var $new_input = '<div class="url_song_input"><div class="col-xs-6"><label>Song Url :</label><input class="form-control url_for_song" type="text"></div><div class="col-xs-6"><label>Song Name :</label><input class="form-control name_for_song" type="text"></div></div>';
+		var $new_input = '<div class="url_song_input"><div class="col-xs-6"><label>Song Url :</label><input placeholder="plz enter here mp3 song with url adress" class="form-control url_for_song" type="text"></div><div class="col-xs-6"><label>Song Name :</label><input class="form-control name_for_song" type="text"></div></div>';
 
 		$('#songs_urls').html($new_input + $new_input + $new_input);
 	}

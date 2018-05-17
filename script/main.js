@@ -31,6 +31,7 @@
 		}
 
 		function _on_clicked_edit_get_playlist() {
+			toggle_modal_to_start();
 			var	$playlist = $(this).closest('.playlist'),
 				id_to_update = $playlist.attr('id');
 
@@ -124,7 +125,7 @@
 
 		function add_more_col(e) {
 			e.preventDefault();
-			var $new_input ='<div class="url_song_input"><div class="col-xs-6"><label>Song Url :</label><input class="form-control url_for_song" type="text"></div><div class="col-xs-6"><label>Song Name :</label><input class="form-control name_for_song" type="text"></div></div>';
+			var $new_input ='<div class="url_song_input"><div class="col-xs-6"><label>Song Url :</label><input placeholder="plz enter here mp3 song with url adress" class="form-control url_for_song" type="text"></div><div class="col-xs-6"><label>Song Name :</label><input class="form-control name_for_song" type="text"></div></div>';
 			$('#songs_urls').append($new_input);
 		}
 
@@ -167,6 +168,10 @@
 			}
 		}
 
+		function toggle_modal_to_start() {
+			$('#step_1').removeClass();
+			$('#step_2').addClass('hide');
+		}
 		function prev_to_change_playlist_name(e) {
 			e.preventDefault();
 			$('#step_1').removeClass();

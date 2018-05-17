@@ -18,7 +18,7 @@
 			.on('change', '#volume', change_vol)
 			.on('click', '#prev', prev_song);
 
-	$('#song_image').on('error', imgError);
+	$('#spinimage').on('error', imgError);
 
 
 		var audio, $playlist_id;
@@ -68,9 +68,8 @@
 			$playlist_id = $(this).closest('[data-playlist_id]').data('playlist_id');
 
 			$('#audio_player').attr('data-playlist_id', $playlist_id);
-
-			//בדיקה
 			$('#hook_for_id').val($playlist_id);
+			// $('.cover').attr('id', 'spinimage');
 
 
 			var is_on_play = $('#audio_player').attr('data-playlist_id');
@@ -98,12 +97,13 @@
 
 			$('#hook_for_delete_in_playlist').attr('data-del', $playlist_id).attr('data-name', $('#id_' + is_on_play).find('.song_name_header').data('name'));
 			$('#duration').fadeIn(400);
-			// $('#main_player').show();
+			$('#spinimage').addClass(' spinimage');
 			showDuration();
 		}
 
 		function pause_music() {
 			audio.pause();
+			$('#spinimage').removeClass('spinimage');
 			show_play_btn_after_click_on_pause($(this));
 		}
 		function show_play_btn_after_click_on_pause(this_element) {
@@ -202,7 +202,7 @@
 		}
 
 		function imgError() {
-			$('#song_image').attr('src', '../images/noimage.jpg');
+			$('#spinimage').attr('src', '../images/noimage.jpg');
 			return true;
 		}
 	}

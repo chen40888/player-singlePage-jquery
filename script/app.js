@@ -6,7 +6,6 @@
 	window.App.send = send;
 	window.App.valid = valid;
 	window.App.delete_playlist = delete_playlist;
-	// window.App.validation = validation;
 	validation();
 
 	function send(type, is_post, request, callback) {
@@ -17,7 +16,6 @@
 				dataType: 'json'
 			};
 
-		// log('url: ' + options.url + ' | is_post: ' + is_post);
 		$.ajax(options).always(_on_response);
 
 		function _on_response(response) {
@@ -45,15 +43,17 @@
 		// console.log(object);
 		var name = object['name'],
 			image = object['image'],
-			songs_array = object['songs'];
+			songs_array = object['songs'],
+			regexUrl = RegExp(/^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/),
+			regex_img = RegExp(/(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/g),
+			image_http_valid = regex_img.test(image),
+			patt = RegExp(/^.{2,}$/);
 
-		var regexUrl = RegExp(/^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/);
-		if(name === '' || image === '') {
+		if(name === '' || image === '' || !image_http_valid) {
+			$('#not_valid').show();
 			return false
 		}
-		var patt = RegExp(/^.{2,}$/);
 
-		// is_valid_name ? valid($this_input) : problem($this_input);
 
 		for(var i = 0; i < songs_array.length; i++) {
 			var song_name = songs_array[i]['name'],
@@ -67,18 +67,12 @@
 
 
 			if(song_name === '' || song_url === '' || !is_valid_name || is_mp3 === -1 || !song_url_mp3valid) {
-				// console.log($(songs_array[i]).closest('div'));
-				// alert();
-				// problem(songs_array[i]);
-// alert();
-
 				$('#not_valid').show();
 				return false;
 			}
 		}
 
-		// $('#not_valid').removeClass(' not_valid');
-
+		$('#not_valid').hide();
 		return true;
 	}
 

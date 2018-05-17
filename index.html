@@ -51,7 +51,7 @@
 			</div>
 		<div id="main_player" class="player_container col-xs-12 col-centered">
 			<div id="audio_image" class="col-sm-6 col-xs-12">
-				<div id="spinimage"><img class="cover" id="song_image"/></div>
+				<img class="cover" id="spinimage"/>
 			</div>
 			<div id="audio_player" data-playlist_id="" class="col-sm-6 col-xs-12">
 				<div class="info">
@@ -114,7 +114,7 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title">Modal Header</h4>
+				<h4 class="modal-title">my playlist</h4>
 			</div>
 			<div class="modal-body">
 				<form id="new_playlist" action="#" method="post">
@@ -123,7 +123,7 @@
 						<input class="form-control" required  minlength="2" maxlength="10" type="text" id="playlist_name">
 
 						<label for="playlist_url">Playlist Image Url :</label>
-						<input class="form-control" type="text" id="playlist_url">
+						<input class="form-control" type="text" placeholder="http://" id="playlist_url">
 						<img id="hook_image_for_playlist" class="playlist_image" src="">
 						<button id="btn_step_1" class="form-control">Next</button>
 						<button id="preview" class="form-control">preview</button>
@@ -133,7 +133,7 @@
 							<div class="url_song_input">
 							<div class="col-xs-6">
 								<label>Song Url :</label>
-								<input class="form-control url_for_song" type="text">
+								<input placeholder="plz enter here mp3 song with url adress" class="form-control url_for_song" type="text">
 							</div>
 							<div class="col-xs-6">
 								<label>Song Name :</label>
@@ -143,7 +143,7 @@
 							<div class="url_song_input">
 								<div class="col-xs-6">
 									<label>Song Url :</label>
-									<input class="form-control url_for_song" type="text">
+									<input placeholder="plz enter here mp3 song with url adress" class="form-control url_for_song" type="text">
 								</div>
 								<div class="col-xs-6">
 									<label>Song Name :</label>
@@ -153,7 +153,7 @@
 							<div class="url_song_input">
 								<div class="col-xs-6">
 									<label>Song Url :</label>
-									<input class="form-control url_for_song" type="text">
+									<input placeholder="plz enter here mp3 song with url adress" class="form-control url_for_song" type="text">
 								</div>
 								<div class="col-xs-6">
 									<label>Song Name :</label>
@@ -161,7 +161,7 @@
 								</div>
 							</div>
 						</div>
-						<button id="add_song" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span> More Song</button>
+						<button id="add_song" class="btn btn-default more_songs"><span class="glyphicon glyphicon-plus"></span> More Song</button>
 						<div class="clearfix"></div>
 
 						<div class="col-xs-6">
@@ -175,7 +175,7 @@
 				</form>
 			</div>
 			<div class="modal-footer">
-				<div class="prob" id="not_valid">plz check our input and put mp3 song with url link</div>
+				<div class="prob" id="not_valid">plz check your inputs the song and image need to be with http.. and mp3 (for songs)</div>
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 			</div>
 		</div>

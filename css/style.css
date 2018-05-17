@@ -249,8 +249,14 @@ h2 span {
 .not_valid .prob{
 	display: block;
 }
+.more_songs {
+	margin: 15px 15px;
+}
 
-#spinimage {
+
+
+
+.spinimage {
 	opacity: 1;
 	-webkit-animation-name: spin;
 	animation-name: spin;
