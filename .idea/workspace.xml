@@ -3,90 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="41075d25-eb93-407e-9049-c3dd34d9e906" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/api/log.php" afterPath="$PROJECT_DIR$/api/log.php" />
       <change beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/700-330.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/7951fd94fd6ebf50729d554a7b618c84(1).png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/7951fd94fd6ebf50729d554a7b618c84.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/IMG_1561-copy-150x150.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/IMG_1582-copy-150x150.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/IMG_1655-copy-150x150.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/add-to-cart.min.js.הורד" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/admin-bar-rtl.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/admin-bar.min.js.הורד" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/adminbar-593-rtl.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/animated-main.js.הורד" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/animations.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/app.min.js(1).הורד" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/app.min.js(2).הורד" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/app.min.js(3).הורד" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/app.min.js.הורד" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/big-storage-bag-gray-150x150.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/big-storage-bag-love-150x150.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/blanket-gray-150x150.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/blue-sky-Diaper-chest-pallet-22-150x150.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/bootstrap.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/bootstrap.min.js.הורד" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/cart-fragments.min.js.הורד" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/css(1)" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/dashicons.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/default-skin.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/eae.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/elementor-contact-form-7.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/elementor-icons.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/font-awesome.min(1).css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/font-awesome.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/frontend-rtl.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/frontend.min.js(1).הורד" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/frontend.min.js.הורד" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/global.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/jquery-migrate.min.js.הורד" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/jquery.blockUI.min.js.הורד" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/jquery.collapse.js.הורד" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/jquery.js.הורד" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/jquery.themepunch.revolution.min.js.הורד" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/jquery.themepunch.tools.min.js.הורד" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/js.cookie.min.js.הורד" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/layout.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/masterslider.min.js.הורד" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/parents-and-kids-1-1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/parents-and-kids-2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/parents-and-kids-3-1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/parents-and-kids-4.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/parents-and-kids-5-1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/parents-and-kids-6.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/photoswipe-ui-default.min.js.הורד" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/photoswipe.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/photoswipe.min.js.הורד" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/post-1133.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/rtl.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/rtl.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/sb-instagram.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/sb-instagram.min.js.הורד" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/scripts.js.הורד" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/settings.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/slick-slider-style.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/slick.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/small-storage-bag-gray-150x150.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/snake-flower-girl-150x150.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/style(1).css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/style.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/style.min(1).css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/style.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/styles-rtl.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/styles.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/waypoints.min.js.הורד" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/woocommerce-layout-rtl.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/woocommerce-rtl.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/woocommerce-smallscreen-rtl.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/woocommerce.min.js.הורד" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/wp-embed.min.js.הורד" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/דף הבית קוקילקות - קוקילקות_files/wp-emoji-release.min.js.הורד" afterPath="" />
       <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change beforePath="$PROJECT_DIR$/script/ajax_request.js" afterPath="$PROJECT_DIR$/script/ajax_request.js" />
       <change beforePath="$PROJECT_DIR$/script/app.js" afterPath="$PROJECT_DIR$/script/app.js" />
-      <change beforePath="$PROJECT_DIR$/script/main.js" afterPath="$PROJECT_DIR$/script/main.js" />
       <change beforePath="$PROJECT_DIR$/script/script.js" afterPath="$PROJECT_DIR$/script/script.js" />
     </list>
     <ignored path="Api.iws" />
@@ -122,8 +43,8 @@
       <file leaf-file-name="ajax_request.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/script/ajax_request.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="739">
-              <caret line="127" column="161" lean-forward="false" selection-start-line="127" selection-start-column="161" selection-end-line="127" selection-end-column="161" />
+            <state relative-caret-position="539">
+              <caret line="89" column="28" lean-forward="true" selection-start-line="89" selection-start-column="28" selection-end-line="89" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -132,18 +53,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="258" column="10" lean-forward="false" selection-start-line="258" selection-start-column="1" selection-end-line="258" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/script/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
-              <caret line="7" column="49" lean-forward="true" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+            <state relative-caret-position="2660">
+              <caret line="133" column="0" lean-forward="false" selection-start-line="133" selection-start-column="0" selection-end-line="141" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -152,18 +63,18 @@
       <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/script/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1981">
-              <caret line="105" column="41" lean-forward="false" selection-start-line="105" selection-start-column="41" selection-end-line="105" selection-end-column="41" />
+            <state relative-caret-position="779">
+              <caret line="92" column="18" lean-forward="false" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/script/main.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="259">
-              <caret line="89" column="21" lean-forward="false" selection-start-line="89" selection-start-column="21" selection-end-line="89" selection-end-column="21" />
+              <caret line="163" column="14" lean-forward="false" selection-start-line="163" selection-start-column="12" selection-end-line="163" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -172,11 +83,11 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1419">
-              <caret line="116" column="51" lean-forward="false" selection-start-line="116" selection-start-column="51" selection-end-line="116" selection-end-column="51" />
+            <state relative-caret-position="1101">
+              <caret line="213" column="38" lean-forward="false" selection-start-line="213" selection-start-column="38" selection-end-line="213" selection-end-column="38" />
               <folding>
-                <element signature="e#4463#4470#1" expanded="true" />
-                <element signature="e#7465#7472#1" expanded="true" />
+                <element signature="e#4456#4463#1" expanded="true" />
+                <element signature="e#7458#7465#1" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -194,11 +105,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>delete_play</find>
-      <find>wrapper_player</find>
-      <find>play</find>
-      <find>click_pla</find>
-      <find>add new</find>
       <find>$doc.data('playlist_id')</find>
       <find>val() ===</find>
       <find>reset</find>
@@ -214,16 +120,21 @@
       <find>hook_save_playlist</find>
       <find>btn_step_1</find>
       <find>e.pre</find>
-      <find>.modal</find>
       <find>song_image</find>
       <find>cover</find>
-      <find>spinimage</find>
       <find>playlist_url</find>
       <find>reg</find>
       <find>not_valid</find>
-      <find>edit_playlist</find>
       <find>Modal Header</find>
+      <find>edit_playlist</find>
+      <find>spinimage</find>
+      <find>song_title</find>
+      <find>duration</find>
+      <find>alon</find>
       <find>add_new_playlist</find>
+      <find>.modal</find>
+      <find>hover</find>
+      <find>if</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -244,12 +155,14 @@
         <option value="$USER_HOME$/AppData/Local/Temp/Rar$DRa0.414/artium.js" />
         <option value="$PROJECT_DIR$/api/playlist.php" />
         <option value="$PROJECT_DIR$/script/datastore.js" />
-        <option value="$PROJECT_DIR$/script/ajax_request.js" />
         <option value="$PROJECT_DIR$/script/main.js" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/script/script.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/script/app.js" />
+        <option value="$PROJECT_DIR$/api/log.php" />
+        <option value="$PROJECT_DIR$/script/example.js" />
+        <option value="$PROJECT_DIR$/script/ajax_request.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -282,7 +195,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -290,15 +202,21 @@
               <item name="Api" type="b2602c69:ProjectViewProjectNode" />
               <item name="Api" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="Api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Api" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="script" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../gal" />
     <property name="SearchEverywhereHistoryKey" value="scr&#9;FILE&#9;file://D:/work/Api/script/script.js&#10;scrip&#9;FILE&#9;file://D:/work/Api/script/script.js&#10;play&#9;FILE&#9;file://D:/work/Api/api/playlist.php&#10;main&#9;FILE&#9;file://D:/work/Api/script/main.js&#10;css&#9;FILE&#9;file://D:/work/Api/css/style.css&#10;inde&#9;FILE&#9;file://D:/work/Api/index.html&#10;ajax&#9;FILE&#9;file://D:/work/Api/script/ajax_request.js&#10;pla&#9;FILE&#9;file://D:/work/Api/api/playlist.php&#10;app&#9;FILE&#9;file://D:/work/Api/script/app.js&#10;sc&#9;FILE&#9;file://D:/work/Api/script/script.js&#10;scri&#9;FILE&#9;file://D:/work/Api/script/script.js&#10;aja&#9;FILE&#9;file://D:/work/Api/script/ajax_request.js&#10;.css&#9;FILE&#9;file://D:/work/Api/css/style.css&#10;main.js&#9;FILE&#9;file://D:/work/Api/script/main.js" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="FullScreen" value="false" />
@@ -411,29 +329,35 @@
       <workItem from="1526490917002" duration="189000" />
       <workItem from="1526491166615" duration="3045000" />
       <workItem from="1526564427858" duration="942000" />
-      <workItem from="1526565373419" duration="8094000" />
+      <workItem from="1526565373419" duration="9330000" />
+      <workItem from="1526579114289" duration="121000" />
+      <workItem from="1526579239300" duration="13000" />
+      <workItem from="1526583604439" duration="30000" />
+      <workItem from="1526633693783" duration="484000" />
+      <workItem from="1526817979788" duration="20000" />
+      <workItem from="1526822231255" duration="611000" />
+      <workItem from="1526823998350" duration="791000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="249998000" />
+    <option name="totallyTimeSpent" value="253304000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19011815" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20891514" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296328" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.327252" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.327252" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -441,6 +365,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.327252" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -465,25 +390,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/script/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="121" column="27" lean-forward="false" selection-start-line="121" selection-start-column="27" selection-end-line="121" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="28" column="36" lean-forward="false" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="52" />
-          <folding>
-            <element signature="e#4463#4470#1" expanded="true" />
-            <element signature="e#7465#7472#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/script/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -512,7 +418,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -537,8 +442,8 @@
         <state relative-caret-position="0">
           <caret line="73" column="26" lean-forward="false" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="26" />
           <folding>
-            <element signature="e#4463#4470#1" expanded="true" />
-            <element signature="e#7465#7472#1" expanded="true" />
+            <element signature="e#4456#4463#1" expanded="true" />
+            <element signature="e#7458#7465#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -563,7 +468,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="24" column="44" lean-forward="false" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -588,8 +492,8 @@
         <state relative-caret-position="0">
           <caret line="73" column="26" lean-forward="false" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="26" />
           <folding>
-            <element signature="e#4463#4470#1" expanded="true" />
-            <element signature="e#7465#7472#1" expanded="true" />
+            <element signature="e#4456#4463#1" expanded="true" />
+            <element signature="e#7458#7465#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -614,7 +518,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="24" column="44" lean-forward="false" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -639,8 +542,8 @@
         <state relative-caret-position="0">
           <caret line="49" column="57" lean-forward="false" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="57" />
           <folding>
-            <element signature="e#4463#4470#1" expanded="true" />
-            <element signature="e#7465#7472#1" expanded="true" />
+            <element signature="e#4456#4463#1" expanded="true" />
+            <element signature="e#7458#7465#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -671,8 +574,8 @@
         <state relative-caret-position="0">
           <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
           <folding>
-            <element signature="e#4463#4470#1" expanded="true" />
-            <element signature="e#7465#7472#1" expanded="true" />
+            <element signature="e#4456#4463#1" expanded="true" />
+            <element signature="e#7458#7465#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -696,8 +599,8 @@
         <state relative-caret-position="0">
           <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
           <folding>
-            <element signature="e#4463#4470#1" expanded="true" />
-            <element signature="e#7465#7472#1" expanded="true" />
+            <element signature="e#4456#4463#1" expanded="true" />
+            <element signature="e#7458#7465#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -728,8 +631,8 @@
         <state relative-caret-position="0">
           <caret line="248" column="0" lean-forward="false" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
           <folding>
-            <element signature="e#4463#4470#1" expanded="true" />
-            <element signature="e#7465#7472#1" expanded="true" />
+            <element signature="e#4456#4463#1" expanded="true" />
+            <element signature="e#7458#7465#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -794,61 +697,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="258" column="10" lean-forward="false" selection-start-line="258" selection-start-column="1" selection-end-line="258" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../benben/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="359">
           <caret line="253" column="16" lean-forward="true" selection-start-line="253" selection-start-column="16" selection-end-line="253" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/log.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3589">
+          <caret line="430" column="20" lean-forward="true" selection-start-line="430" selection-start-column="20" selection-end-line="430" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="820">
+          <caret line="41" column="28" lean-forward="false" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2660">
+          <caret line="133" column="0" lean-forward="false" selection-start-line="133" selection-start-column="0" selection-end-line="141" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script/main.js">
+    <entry file="file://$PROJECT_DIR$/script/example.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="89" column="21" lean-forward="false" selection-start-line="89" selection-start-column="21" selection-end-line="89" selection-end-column="21" />
+        <state relative-caret-position="240">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/ajax_request.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="89" column="28" lean-forward="true" selection-start-line="89" selection-start-column="28" selection-end-line="89" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/script/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1981">
-          <caret line="105" column="41" lean-forward="false" selection-start-line="105" selection-start-column="41" selection-end-line="105" selection-end-column="41" />
+        <state relative-caret-position="779">
+          <caret line="92" column="18" lean-forward="false" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1419">
-          <caret line="116" column="51" lean-forward="false" selection-start-line="116" selection-start-column="51" selection-end-line="116" selection-end-column="51" />
+        <state relative-caret-position="1101">
+          <caret line="213" column="38" lean-forward="false" selection-start-line="213" selection-start-column="38" selection-end-line="213" selection-end-column="38" />
           <folding>
-            <element signature="e#4463#4470#1" expanded="true" />
-            <element signature="e#7465#7472#1" expanded="true" />
+            <element signature="e#4456#4463#1" expanded="true" />
+            <element signature="e#7458#7465#1" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script/ajax_request.js">
+    <entry file="file://$PROJECT_DIR$/script/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="739">
-          <caret line="127" column="161" lean-forward="false" selection-start-line="127" selection-start-column="161" selection-end-line="127" selection-end-column="161" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/script/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="7" column="49" lean-forward="true" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+        <state relative-caret-position="259">
+          <caret line="163" column="14" lean-forward="false" selection-start-line="163" selection-start-column="12" selection-end-line="163" selection-end-column="14" />
           <folding />
         </state>
       </provider>

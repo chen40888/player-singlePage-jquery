@@ -10,11 +10,11 @@
 
 	function send(type, is_post, request, callback) {
 		var options = {
-				url: 'http://www.api.local/api/playlist.php?type=' + type,
-				type: (is_post ? 'POST' : 'GET'),
-				data: request,
-				dataType: 'json'
-			};
+			url: 'http://www.api.local/api/playlist.php?type=' + type,
+			type: (is_post ? 'POST' : 'GET'),
+			data: request,
+			dataType: 'json'
+		};
 
 		$.ajax(options).always(_on_response);
 
@@ -54,7 +54,6 @@
 			return false
 		}
 
-
 		for(var i = 0; i < songs_array.length; i++) {
 			var song_name = songs_array[i]['name'],
 				song_url = songs_array[i]['url'];
@@ -63,8 +62,7 @@
 			var is_mp3 = song_url.search(/.mp3/i);
 			var song_url_mp3valid = regexUrl.test(song_url);
 
-			console.log('song_url_mp3valid ' +song_url_mp3valid);
-
+			console.log('song_url_mp3valid ' + song_url_mp3valid);
 
 			if(song_name === '' || song_url === '' || !is_valid_name || is_mp3 === -1 || !song_url_mp3valid) {
 				$('#not_valid').show();

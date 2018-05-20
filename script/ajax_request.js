@@ -69,7 +69,7 @@
 			var id_to_up = $('#hook_for_id').val();
 			// console.log(id_to_up);
 			window.App.send('songs&id=' + id_to_up, true, request, _on_post_playlist_success);
-			after_update_seccess(id_to_up ,request.songs);
+			after_update_seccess(id_to_up, request.songs);
 
 			// window.App.send('songs&id=' + $doc.data('playlist_id'), true, request, _on_post_playlist_success);
 			// after_update_seccess($doc.data('playlist_id'),request.songs);
@@ -86,6 +86,9 @@
 				i++
 			}
 
+			console.log($('#audio_player').data('playlist_id'));
+			console.log(id);
+			alert();
 			if($('#audio_player').data('playlist_id') == id) {
 				var update_songs = $('#id_' + id).find('ul').html();
 				$('#playlist').html(update_songs);
@@ -142,7 +145,7 @@
 				$('#message').hide();
 			}, 4000);
 
-			if($('#audio_player').data('playlist_id') == $id_to_delete) {
+			if($('#audio_player').data('playlist_id') === $id_to_delete) {
 				$('#wrapper_player').hide();
 			}
 		}

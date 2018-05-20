@@ -448,7 +448,7 @@ class Log_To_Email {
 			'is_send_via_lyris' => true,
 			'trigger_id' => 10083, // to_moderator
 			'emails' => array(
-				'alon77@alpha.co.il',
+				'chen@gmail.co.il',
 				'habmic@gmail.com'
 			),
 			'template_name' => 'custom',

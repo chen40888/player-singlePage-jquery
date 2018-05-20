@@ -94,12 +94,12 @@ input#volume::-webkit-slider-thumb {
 	left: 0;
 	background: url(../images/progress.png) no-repeat;
 }
-/*#duration {*/
-	/*float: right;*/
-	/*background: #000;*/
-	/*padding: 4px 8px;*/
-	/*border-radius: 5px;*/
-/*}*/
+#duration {
+	float: right;
+	background: #000;
+	padding: 4px 8px;
+	border-radius: 5px;
+}
 .navbar {
 	margin-bottom: 0;
 	border-radius: 0;
@@ -252,9 +252,6 @@ h2 span {
 .more_songs {
 	margin: 15px 15px;
 }
-
-
-
 
 .spinimage {
 	opacity: 1;

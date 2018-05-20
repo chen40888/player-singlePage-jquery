@@ -18,8 +18,7 @@
 			.on('change', '#volume', change_vol)
 			.on('click', '#prev', prev_song);
 
-	$('#spinimage').on('error', imgError);
-
+		$('#spinimage').on('error', imgError);
 
 		var audio, $playlist_id;
 
@@ -28,24 +27,23 @@
 		$('.pause_btn').hide();
 		$('#wrapper_player').hide();
 
-
-		function initAudio(element){
+		function initAudio(element) {
 			var
-			song = element.data('song'),
-			title = element.text(),
-			cover = element.data('cover'),
-			artist = element.data('artist');
+				song = element.data('song'),
+				title = element.text(),
+				cover = element.data('cover'),
+				artist = element.data('artist');
 			// log(element.length);
 
 			//Create a New Audio Object
 			audio = new Audio(song);
 
-			if(!audio.currentTime){
+			if(!audio.currentTime) {
 				$('#duration').html('0.00');
 			}
 
 			$('#audio_player')
-				.find('.song_title').text('song on action: ' + title).end()
+				.find('.song_title').text('Action: ' + title).end()
 				.find('.artist').text(artist);
 
 			//Insert Cover Image
@@ -54,7 +52,6 @@
 			$('#playlist').find('li').removeClass('active');
 			element.addClass('active');
 		}
-
 
 		function _prevent_default(e) {
 			e.preventDefault();
@@ -69,8 +66,6 @@
 
 			$('#audio_player').attr('data-playlist_id', $playlist_id);
 			$('#hook_for_id').val($playlist_id);
-			// $('.cover').attr('id', 'spinimage');
-
 
 			var is_on_play = $('#audio_player').attr('data-playlist_id');
 			console.log(is_on_play);
@@ -82,8 +77,6 @@
 			$this_playlist.addClass('action');
 			if(audio) pause_music(); // הגנה מפני השמעה של כמה שירים במקביל
 
-
-
 			show_pause_btn_after_click_on_play($(this), $playlist_id);
 
 			$playlist_wraper = $(this).closest('.playlist');
@@ -93,7 +86,7 @@
 			initAudio($('#playlist').find('li:first-child'));
 			audio.play();
 
-			audio.addEventListener('ended',next_song); // when this song over play its load the next song
+			audio.addEventListener('ended', next_song); // when this song over play its load the next song
 
 			$('#hook_for_delete_in_playlist').attr('data-del', $playlist_id).attr('data-name', $('#id_' + is_on_play).find('.song_name_header').data('name'));
 			$('#duration').fadeIn(400);
@@ -106,6 +99,7 @@
 			$('#spinimage').removeClass('spinimage');
 			show_play_btn_after_click_on_pause($(this));
 		}
+
 		function show_play_btn_after_click_on_pause(this_element) {
 			$('.pause_btn, #pause').hide();
 			$('.click_play, #play').show();
@@ -113,8 +107,9 @@
 			$play_btn = $(this_element).closest('.play_and_pause').find('.click_play');
 			$play_btn.show();
 		}
+
 		function show_pause_btn_after_click_on_play(this_element, $playlist_id) {
-			var id = $('#id_' +$playlist_id);
+			var id = $('#id_' + $playlist_id);
 			$('.pause_btn, #play').hide();
 			$('.click_play, #pause').show();
 
@@ -145,19 +140,19 @@
 		function next_song() {
 			audio.pause();
 			var next = $('#playlist').find('li.active').next();
-			if (next.length === 0) {
+			if(next.length === 0) {
 				next = $('#playlist').find('li:first-child');
 			}
 			initAudio(next);
 			audio.play();
 			showDuration();
-			audio.addEventListener('ended',next_song);
+			audio.addEventListener('ended', next_song);
 		}
 
 		function prev_song() {
 			audio.pause();
 			var prev = $('#playlist').find('li.active').prev();
-			if (prev.length === 0) {
+			if(prev.length === 0) {
 				prev = $('#playlist').find('li:last-child');
 			}
 			initAudio(prev);
@@ -181,23 +176,24 @@
 		}
 
 		//Time Duration
-		function showDuration(){
+		function showDuration() {
 			$(audio).on('timeupdate', update_time);
+
 			// log(audio.ended);//parseInt
-			function update_time (){
+			function update_time() {
 				//Get hours and minutes
 				var s = parseInt(audio.currentTime % 60);
 				var m = parseInt((audio.currentTime / 60) % 60);
 				//Add 0 if seconds less than 10
-				if (s < 10) {
+				if(s < 10) {
 					s = '0' + s;
 				}
 				$('#duration').html(m + '.' + s);
 				var value = 0;
-				if (audio.currentTime > 0) {
+				if(audio.currentTime > 0) {
 					value = Math.floor((100 / audio.duration) * audio.currentTime);
 				}
-				$('.progress').css('width',value+'%');
+				$('.progress').css('width', value + '%');
 			}
 		}
 
