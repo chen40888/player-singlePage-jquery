@@ -67,12 +67,10 @@
 		function _on_update() {
 
 			var id_to_up = $('#hook_for_id').val();
-			// console.log(id_to_up);
+
 			window.App.send('songs&id=' + id_to_up, true, request, _on_post_playlist_success);
 			after_update_seccess(id_to_up, request.songs);
 
-			// window.App.send('songs&id=' + $doc.data('playlist_id'), true, request, _on_post_playlist_success);
-			// after_update_seccess($doc.data('playlist_id'),request.songs);
 		}
 
 		function after_update_seccess(id, songs) {
@@ -87,8 +85,7 @@
 			}
 
 			console.log($('#audio_player').data('playlist_id'));
-			console.log(id);
-			alert();
+
 			if($('#audio_player').data('playlist_id') == id) {
 				var update_songs = $('#id_' + id).find('ul').html();
 				$('#playlist').html(update_songs);
@@ -131,6 +128,7 @@
 		var $new_input = '<div class="url_song_input"><div class="col-xs-6"><label>Song Url :</label><input placeholder="plz enter here mp3 song with url adress" class="form-control url_for_song" type="text"></div><div class="col-xs-6"><label>Song Name :</label><input class="form-control name_for_song" type="text"></div></div>';
 
 		$('#songs_urls').html($new_input + $new_input + $new_input);
+		$('#hook_image_for_playlist').attr('src', '');
 	}
 
 	function _delete_from_db() {

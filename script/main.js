@@ -14,6 +14,7 @@
 			.on('click', '.hook_for_delete', delete_this_playlist)
 			.on('blur', '.url_for_song', regexp_for_mp3)
 			.on('blur', '.name_for_song', regexp_for_name)
+			.on('blur', '#playlist_url', regexp_for_image)
 			.on('click', '[data-target="#myModal"]', _on_clicked_to_open_modal);
 
 
@@ -38,8 +39,8 @@
 			id_to_update = id_to_update.split('_')[1];
 			$doc.data('playlist_id', id_to_update);
 			$('#hook_for_id').val(id_to_update);
-			// $('#audio_player').attr('data-playlist_id', id_to_update);
-			// log($doc);
+
+
 			window.App.send('playlist&id=' + id_to_update, false, {}, _on_success_update_modal_with_playlist_data);
 		}
 
@@ -56,8 +57,6 @@
 			$('#playlist_name').val(playlist_name);
 			$('#playlist_url').val(playlist_image);
 
-			//log(playlist_object);
-			//log(songs_array.length);
 			$songs_urls.html('');
 
 			for(index; index < songs_array.length; index++) {
@@ -69,10 +68,7 @@
 		}
 
 		function _on_clicked_first_next_step_update_or_move() {
-			// console.log('wach here');
-			// console.log($doc);
 			var
-				// id_to_update = $('#audio_player').data('playlist_id'),
 				id_to_update = $doc.data('playlist_id'),
 				playlist_name = $('#playlist_name').val(),
 				playlist_url_image = $('#playlist_url').val(),
@@ -148,6 +144,15 @@
 			is_valid_name ? valid($this_input) : problem($this_input);
 
 		}
+		function regexp_for_image() {
+			var $this_input = $(this);
+			var image_url = $(this).val();
+			var patt = RegExp(/(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/g);
+			var is_valid_image = patt.test(image_url);
+
+			is_valid_image ? valid($this_input) : problem($this_input);
+
+		}
 
 		function problem($this_input) {
 			$this_input.addClass(' problem');
@@ -171,6 +176,7 @@
 		function toggle_modal_to_start() {
 			$('#step_1').removeClass();
 			$('#step_2').addClass('hide');
+			$('#hook_image_for_playlist').attr('src', '');
 		}
 		function prev_to_change_playlist_name(e) {
 			e.preventDefault();

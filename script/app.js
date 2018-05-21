@@ -62,8 +62,6 @@
 			var is_mp3 = song_url.search(/.mp3/i);
 			var song_url_mp3valid = regexUrl.test(song_url);
 
-			console.log('song_url_mp3valid ' + song_url_mp3valid);
-
 			if(song_name === '' || song_url === '' || !is_valid_name || is_mp3 === -1 || !song_url_mp3valid) {
 				$('#not_valid').show();
 				return false;

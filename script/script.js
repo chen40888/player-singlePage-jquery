@@ -84,8 +84,8 @@
 			$('#playlist').html($list_songs);
 
 			initAudio($('#playlist').find('li:first-child'));
-			audio.play();
 
+			audio.play();
 			audio.addEventListener('ended', next_song); // when this song over play its load the next song
 
 			$('#hook_for_delete_in_playlist').attr('data-del', $playlist_id).attr('data-name', $('#id_' + is_on_play).find('.song_name_header').data('name'));
