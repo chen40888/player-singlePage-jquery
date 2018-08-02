@@ -163,6 +163,7 @@
 		window.App.send('playlist', false, {}, _on_get_playlist_success);
 
 		function _on_get_playlist_success(response) {
+			console.log(response);
 			if(isset(response.data, 'length')) _create_list_with_data(response.data);
 		}
 

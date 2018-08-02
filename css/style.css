@@ -39,7 +39,7 @@ body {
 }
 .cover {
 	z-index: 1;
-	width: 200px;
+	width: 190px;
 	height: 200px;
 	padding: 8px 0 0;
 	border-radius: 159px;
@@ -252,6 +252,12 @@ h2 span {
 .more_songs {
 	margin: 15px 15px;
 }
+#this_playlist_name {
+	color: brown;
+	font: 22px/20px bold arial;
+}
+
+
 
 .spinimage {
 	opacity: 1;
@@ -307,6 +313,6 @@ h2 span {
 		margin: 0 30px 0;
 	}
 	.cover {
-		margin: 55px 0 0;
+		margin: 3px 0 0;
 	}
 }
